@@ -3574,3 +3574,13 @@ section.vision-mission-section
   }
 
 }
+
+/* =========================================================
+   FIX MOBILE — KONSULTASI TIDAK TERTUTUP HEADER
+========================================================= */
+
+@media (max-width: 600px) {
+  #konsultasi {
+    padding-top: 150px !important;
+  }
+}
