@@ -3576,30 +3576,30 @@ section.vision-mission-section
 }
 
 /* =========================================================
-   FOTO ADMIN SALES — HP PORTRAIT
-   KOTAK PENUH + FOTO TIDAK TERPOTONG
+   FOTO ADMIN SALES — HP
+   FULL FOTO, TANPA CROP, TANPA SISA KOSONG
 ========================================================= */
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-width: 600px) {
 
   .consultant-photo {
     width: 100% !important;
     height: auto !important;
-    aspect-ratio: 4 / 5 !important;
+    aspect-ratio: auto !important;
     overflow: hidden !important;
-    border-radius: 12px !important;
     display: block !important;
-    background: #e8e0d4 !important;
+    border-radius: 12px !important;
+    background: transparent !important;
   }
 
   .consultant-photo img {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
     display: block !important;
-
-    /* FOTO MEMENUHI KOTAK */
-    object-fit: cover !important;
-    object-position: center center !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 12px !important;
   }
 
 }
