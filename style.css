@@ -1052,17 +1052,17 @@ section.vision-mission-section
   z-index: 1;
 }
 
-.consultation-feature img {
+.consultant-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 462px;
   display: block;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 10px;
-  background: #e8e0d4;
-
+  object-position: center;
+  background: transparent;
   transition:
-    transform .4s ease,
-    box-shadow .4s ease;
+    transform .45s ease,
+    box-shadow .45s ease;
 }
 
 .consultation-feature img:hover {
@@ -1138,6 +1138,14 @@ section.vision-mission-section
   gap: 30px;
 }
 
+  .consultant-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  max-height: none;
+}
+  
   .consultation-grid {
     grid-template-columns: repeat(3, 80px);
     column-gap: 25px;
