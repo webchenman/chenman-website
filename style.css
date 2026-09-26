@@ -1045,6 +1045,7 @@ section.vision-mission-section
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  width: 100%;
   max-width: 960px;
   margin: 40px auto 0;
   position: relative;
@@ -1131,9 +1132,11 @@ section.vision-mission-section
   }
 
   .consultation-feature {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-  }
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 100%;
+  gap: 30px;
+}
 
   .consultation-grid {
     grid-template-columns: repeat(3, 80px);
@@ -3507,10 +3510,6 @@ section.vision-mission-section
     height: 190px;
   }
 
-  /* Foto Konsultan */
-  .consultant-photo img {
-    max-height: 280px;
-  }
 
   /* Foto Project */
   .project {
