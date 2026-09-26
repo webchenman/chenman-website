@@ -3484,3 +3484,77 @@ section.vision-mission-section
   position: relative;
   z-index: 1;
 }
+/* =========================================================
+   GLOBAL — PERKECIL GAMBAR DI HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* Semua gambar */
+  img {
+    max-width: 100%;
+  }
+
+  /* Foto Team */
+  .team-photo {
+    height: 230px;
+  }
+
+  /* Foto Produk */
+  .product-image {
+    height: 190px;
+  }
+
+  /* Foto Konsultan */
+  .consultant-photo img {
+    max-height: 280px;
+  }
+
+  /* Foto Project */
+  .project {
+    width: 72vw;
+    flex-basis: 72vw;
+    height: 330px;
+  }
+
+  /* Foto Vitrase */
+  .vitrase-preview-image {
+    min-height: 280px;
+    height: 280px;
+  }
+
+}
+
+/* =========================================================
+   VITRASE — HP JADI 1 KOLOM
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .vitrase-catalog {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .vitrase-codes {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .vitrase-code-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .vitrase-preview {
+    width: 100%;
+  }
+
+  .vitrase-preview-image {
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
+  }
+
+}
