@@ -1,0 +1,3486 @@
+/* ========================================================= 
+   CHENMAN — MAIN CSS 
+========================================================= */ 
+ 
+:root { 
+  --black: #080807; 
+  --dark: #0d0d0c; 
+  --dark-soft: #11110f; 
+ 
+  --gold: #c99245; 
+  --gold-soft: #c58d48; 
+ 
+  --cream: #f4eee3; 
+  --cream-light: #f8f5ef; 
+  --cream-soft: #ebe8e3; 
+ 
+  --muted: #aaa398; 
+  --text-dark: #302820; 
+  --line: rgba(255,255,255,.12); 
+ 
+  --serif: 'Playfair Display', serif; 
+  --sans: 'DM Sans', sans-serif; 
+} 
+ 
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+} 
+ 
+html { 
+  scroll-behavior: smooth; 
+} 
+ 
+body { 
+  background: var(--black); 
+  color: #fff; 
+  font-family: var(--sans); 
+  line-height: 1.6; 
+} 
+ 
+img { 
+  max-width: 100%; 
+} 
+ 
+button, 
+a { 
+  font-family: inherit; 
+} 
+ 
+ 
+/* ========================================================= 
+   HEADER 
+========================================================= */ 
+ 
+.site-header { 
+  height: 82px; 
+  position: sticky; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  padding: 0 7%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  background: rgba(5,5,4,.78); 
+  backdrop-filter: blur(8px); 
+  border-bottom: 1px solid rgba(255,255,255,.05); 
+} 
+ 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-main {
+  font-family: var(--serif);
+  font-size: 21px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.brand-premium {
+  margin-left: -3px;
+  font-family: var(--serif);
+  font-size: 12px;
+  font-style: italic;
+  color: #c4933f;
+  letter-spacing: 1px;
+}
+ 
+.desktop-nav { 
+  display: flex; 
+  gap: 34px; 
+  margin-left: auto; 
+  margin-right: 38px; 
+} 
+ 
+.desktop-nav a, 
+.header-actions a { 
+  color: #eee; 
+  text-decoration: none; 
+  font-size: 12px; 
+  letter-spacing: 1.4px; 
+  text-transform: uppercase; 
+  transition: color .25s ease; 
+} 
+ 
+.desktop-nav a:hover { 
+  color: var(--gold); 
+} 
+ 
+.outline-btn { 
+  border: 1px solid rgba(201,146,69,.55); 
+  padding: 10px 23px; 
+  color: var(--gold) !important; 
+} 
+ 
+.header-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 30px; 
+} 
+ 
+.menu-btn { 
+  background: none; 
+  border: 0; 
+  width: 28px; 
+  cursor: pointer; 
+} 
+ 
+.menu-btn i { 
+  display: block; 
+  height: 1px; 
+  background: #fff; 
+  margin: 7px 0; 
+} 
+ 
+.mobile-menu { 
+  display: none; 
+} 
+ 
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  /* FOTO GORDEN BACKGROUND */
+  background-image:
+    url('assets/gorden.png');
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+
+/* LAPISAN GELAP AGAR TEKS TETAP TERBACA */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,7,6,.96) 0%,
+      rgba(7,7,6,.88) 25%,
+      rgba(7,7,6,.55) 52%,
+      rgba(7,7,6,.18) 78%,
+      rgba(7,7,6,.30) 100%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.48)
+    );
+}
+
+
+/* ISI HERO */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 7%;
+  padding-top: 70px;
+  width: min(640px,55%);
+}
+
+
+/* LABEL ATAS */
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.eyebrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  margin-right: 11px;
+}
+
+
+/* JUDUL */
+
+.hero h1 {
+  font:
+    400 clamp(54px,6vw,84px)/1.05
+    var(--serif);
+
+  letter-spacing: -2px;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+
+/* DESKRIPSI */
+
+.lead {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #eee8dc;
+  max-width: 590px;
+  margin: 28px 0 36px;
+}
+
+
+/* BUTTON */
+
+.gold-btn {
+  display: inline-flex;
+  align-items: center;
+
+  background: var(--gold);
+  color: #111;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.gold-btn b {
+  width: 48px;
+  height: 48px;
+
+  background: var(--cream);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.gold-btn:not(:has(b)) {
+  padding: 15px 24px;
+}
+
+.gold-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(201,146,69,.22);
+}
+
+
+/* TEKS KECIL KANAN BAWAH */
+
+.hero-caption {
+  position: absolute;
+
+  right: 7%;
+  bottom: 8%;
+
+  z-index: 2;
+
+  color: #fff8;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  text-align: right;
+}
+
+.hero-caption span {
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   HERO MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    background-position: 65% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7,7,6,.96) 0%,
+        rgba(7,7,6,.82) 48%,
+        rgba(7,7,6,.42) 100%
+      );
+  }
+
+  .hero-content {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 100svh;
+    background-position: 65% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7,7,6,.97) 0%,
+        rgba(7,7,6,.84) 55%,
+        rgba(7,7,6,.48) 100%
+      );
+  }
+
+  .hero-content {
+    margin-left: 22px;
+    width: calc(100% - 44px);
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .hero-caption {
+    display: none;
+  }
+
+}
+ 
+/* ========================================================= 
+   GENERAL 
+========================================================= */ 
+ 
+.section { 
+  padding: 120px 7%; 
+  border-top: 1px solid var(--line); 
+} 
+ 
+.intro { 
+  display: grid; 
+  grid-template-columns: .6fr 1.4fr; 
+  gap: 8%; 
+  background: var(--black); 
+} 
+ 
+.section-label { 
+  font-size: 10px; 
+  letter-spacing: 2px; 
+  color: var(--gold); 
+  font-weight: 700; 
+} 
+ 
+.kicker { 
+  font-size: 11px; 
+  letter-spacing: 2.5px; 
+  color: var(--gold); 
+  font-weight: 700; 
+  margin-bottom: 18px; 
+} 
+ 
+.section h2 { 
+  font: 
+    400 clamp(42px,5vw,68px)/1.08 
+    var(--serif); 
+  letter-spacing: -1.5px; 
+} 
+ 
+.body-copy { 
+  max-width: 650px; 
+  color: var(--muted); 
+  font-size: 16px; 
+  line-height: 1.9; 
+  margin: 25px 0 30px; 
+} 
+ 
+/* =========================================================
+   VISION & MISSION — PREMIUM 3D CLICK
+========================================================= */
+
+section.vision-mission-section {
+  display: block !important;
+  background: var(--black);
+  color: #fff;
+  padding: 120px 7%;
+}
+
+/* HEADER */
+
+section.vision-mission-section .vision-mission-label {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 65px;
+}
+
+section.vision-mission-section .vision-mission-line {
+  width: 100px;
+  height: 1px;
+  background: rgba(255,255,255,.18);
+}
+
+/* LAYOUT */
+
+section.vision-mission-section .vision-mission-content {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 8%;
+  align-items: center;
+}
+
+section.vision-mission-section .vision-mission-intro .kicker {
+  margin-bottom: 20px;
+}
+
+section.vision-mission-section .vision-mission-intro h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(42px,5vw,68px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+section.vision-mission-section .vision-mission-intro h2 em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* =========================================================
+   CARD AREA
+========================================================= */
+
+section.vision-mission-section .vision-mission-cards {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 20px;
+  align-items: stretch;
+  perspective: 1200px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+section.vision-mission-section .vision-card {
+  position: relative;
+  min-width: 0;
+  min-height: 350px;
+
+  padding: 34px 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151512 0%,
+      #11110f 100%
+    );
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  transform-style: preserve-3d;
+
+  transform:
+    perspective(1200px)
+    translateY(0)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+
+  transition:
+    transform .55s cubic-bezier(.16,1,.3,1),
+    box-shadow .55s cubic-bezier(.16,1,.3,1),
+    border-color .35s ease,
+    background .35s ease;
+
+  will-change: transform, box-shadow;
+}
+
+/* GOLD ACCENT */
+
+section.vision-mission-section .vision-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: var(--gold);
+
+  transition:
+    width .5s cubic-bezier(.16,1,.3,1);
+}
+
+/* LIGHT REFLECTION */
+
+section.vision-mission-section .vision-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.09),
+      transparent 32%,
+      transparent 70%,
+      rgba(201,146,69,.025)
+    );
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity .45s ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+  section.vision-mission-section
+  .vision-card:hover:not(.active) {
+    transform:
+      perspective(1200px)
+      translateY(-8px)
+      rotateX(2deg)
+      rotateY(-1deg)
+      scale(1.015);
+
+    border-color: rgba(201,146,69,.38);
+
+    box-shadow:
+      0 14px 30px rgba(0,0,0,.28),
+      0 28px 55px rgba(0,0,0,.18);
+  }
+
+}
+
+/* =========================================================
+   ACTIVE / SAAT DIKLIK
+========================================================= */
+
+section.vision-mission-section
+.vision-card.active {
+  transform:
+    perspective(1200px)
+    translateY(-24px)
+    rotateX(4deg)
+    rotateY(-3deg)
+    scale(1.045);
+
+  border-color: var(--gold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c18 0%,
+      #151512 55%,
+      #10100e 100%
+    );
+
+  box-shadow:
+    0 8px 12px rgba(0,0,0,.25),
+    0 18px 30px rgba(0,0,0,.30),
+    0 35px 60px rgba(0,0,0,.50),
+    0 55px 100px rgba(0,0,0,.30),
+    0 0 0 1px rgba(201,146,69,.18),
+    0 0 40px rgba(201,146,69,.08);
+
+  z-index: 10;
+}
+
+section.vision-mission-section
+.vision-card.active::after {
+  opacity: 1;
+}
+
+section.vision-mission-section
+.vision-card.active::before {
+  width: 100%;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+section.vision-mission-section .vision-icon {
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201,146,69,.45);
+  color: var(--gold);
+
+  margin-bottom: 28px;
+
+  transform:
+    translateZ(0)
+    scale(1);
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    background .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+section.vision-mission-section .vision-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+  display: block;
+}
+
+section.vision-mission-section
+.vision-card.active .vision-icon {
+  transform:
+    translateZ(28px)
+    scale(1.15);
+
+  background: rgba(201,146,69,.10);
+  border-color: var(--gold);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.35),
+    0 0 20px rgba(201,146,69,.10);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+section.vision-mission-section .vision-card-title {
+  position: relative;
+  z-index: 2;
+
+  color: #fff;
+
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1.5px;
+
+  transform: translateZ(0);
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    color .35s ease;
+}
+
+section.vision-mission-section
+.vision-card.active .vision-card-title {
+  color: var(--gold);
+  transform: translateZ(18px);
+}
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+section.vision-mission-section .vision-card-line {
+  position: relative;
+  z-index: 2;
+
+  width: 35px;
+  height: 1px;
+
+  background: var(--gold);
+
+  margin: 14px 0 20px;
+
+  transform: translateZ(0);
+
+  transition:
+    width .45s cubic-bezier(.16,1,.3,1),
+    transform .5s cubic-bezier(.16,1,.3,1);
+}
+
+section.vision-mission-section
+.vision-card.active .vision-card-line {
+  width: 70px;
+  transform: translateZ(16px);
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+section.vision-mission-section
+.vision-card p,
+section.vision-mission-section
+.vision-card li {
+  position: relative;
+  z-index: 2;
+
+  color: var(--muted);
+
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.85;
+
+  transform: translateZ(0);
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    color .35s ease;
+}
+
+section.vision-mission-section
+.vision-card p {
+  margin: 0;
+}
+
+section.vision-mission-section
+.vision-card ul {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  padding-left: 18px;
+
+  transform: translateZ(0);
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1);
+}
+
+section.vision-mission-section
+.vision-card li {
+  margin-bottom: 12px;
+}
+
+section.vision-mission-section
+.vision-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* ACTIVE TEXT */
+
+section.vision-mission-section
+.vision-card.active p,
+section.vision-mission-section
+.vision-card.active ul {
+  transform: translateZ(12px);
+}
+
+section.vision-mission-section
+.vision-card.active p,
+section.vision-mission-section
+.vision-card.active li {
+  color: #d2cbc0;
+}
+
+/* =========================================================
+   REVEAL ANIMATION COMPATIBILITY
+   supaya .reveal tidak mematikan efek 3D
+========================================================= */
+
+section.vision-mission-section
+.vision-card.reveal {
+  transform:
+    perspective(1200px)
+    translateY(25px)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1);
+}
+
+section.vision-mission-section
+.vision-card.reveal.visible {
+  transform:
+    perspective(1200px)
+    translateY(0)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1);
+}
+
+section.vision-mission-section
+.vision-card.reveal.visible.active {
+  transform:
+    perspective(1200px)
+    translateY(-24px)
+    rotateX(4deg)
+    rotateY(-3deg)
+    scale(1.045);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  section.vision-mission-section {
+    padding: 85px 5%;
+  }
+
+  section.vision-mission-section
+  .vision-mission-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-cards {
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    perspective: 1000px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  section.vision-mission-section {
+    padding: 65px 22px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-label {
+    margin-bottom: 45px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-line {
+    width: 60px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-content {
+    gap: 35px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-intro h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  section.vision-mission-section
+  .vision-mission-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    perspective: 900px;
+  }
+
+  section.vision-mission-section
+  .vision-card {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+  section.vision-mission-section
+  .vision-card.active {
+    transform:
+      perspective(900px)
+      translateY(-14px)
+      rotateX(2deg)
+      rotateY(-1deg)
+      scale(1.025);
+
+    box-shadow:
+      0 10px 20px rgba(0,0,0,.30),
+      0 25px 50px rgba(0,0,0,.45),
+      0 0 0 1px rgba(201,146,69,.15);
+  }
+
+  section.vision-mission-section
+  .vision-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 22px;
+  }
+
+  section.vision-mission-section
+  .vision-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  section.vision-mission-section
+  .vision-card.reveal.visible.active {
+    transform:
+      perspective(900px)
+      translateY(-14px)
+      rotateX(2deg)
+      rotateY(-1deg)
+      scale(1.025);
+  }
+
+}
+
+/* ========================================================= 
+   FOTO TEAM / FOTO RAMEAN 
+========================================================= */ 
+ 
+.team-section { 
+  padding: 0 7% 120px; 
+  background: var(--black); 
+} 
+ 
+.team-photo { 
+  width: 100%; 
+  height: 650px; 
+  overflow: hidden; 
+  background: #171715; 
+  position: relative; 
+} 
+ 
+.team-photo img { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; 
+  transition: transform .8s ease; 
+} 
+ 
+.team-photo:hover img { 
+  transform: scale(1.025); 
+} 
+ 
+.team-caption { 
+  position: absolute; 
+  left: 35px; 
+  bottom: 30px; 
+  z-index: 2; 
+  color: #fff; 
+  font-size: 11px; 
+  letter-spacing: 2px; 
+} 
+ 
+.team-caption span { 
+  color: var(--gold); 
+} 
+ 
+ 
+/* ========================================================= 
+   FOTO KONSULTASI / KARYAWAN 
+========================================================= */ 
+ 
+ .sales-section {
+  width: 100%;
+  padding: 45px 5% 50px;
+
+  background-image: url("assets/bg-sal.png") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--text-dark);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* FOTO 3 ORANG DI ATAS */
+
+.consultation-feature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 960px;
+  margin: 40px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.consultation-feature img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e8e0d4;
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.consultation-feature img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.15);
+}
+
+
+/* FOTO STAFF 6 + 3 */
+
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  justify-content: center;
+  column-gap: 35px;
+  row-gap: 28px;
+  max-width: 900px;
+  margin: 50px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.consultation-grid img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.consultation-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .sales-section {
+    width: calc(100% - 30px);
+    padding: 60px 30px 70px;
+  }
+
+  .consultation-grid {
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 60px;
+    row-gap: 28px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .sales-section {
+    width: calc(100% - 20px);
+    padding: 50px 20px 60px;
+    border-radius: 18px;
+  }
+
+  .consultation-feature {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .consultation-grid {
+    grid-template-columns: repeat(3, 80px);
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+
+  .consultation-grid img {
+    width: 70px;
+    height: 70px;
+  }
+
+}
+ 
+/* ========================================================= 
+   COLLECTION 
+========================================================= */ 
+ 
+.collection { 
+  background: var(--dark); 
+} 
+ 
+.section-head { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: end; 
+  gap: 30px; 
+  margin-bottom: 50px; 
+} 
+ 
+.text-link { 
+  color: var(--gold); 
+  text-decoration: none; 
+  font-size: 12px; 
+  letter-spacing: 1px; 
+} 
+ 
+.cards { 
+  display: grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap: 22px; 
+} 
+ 
+.card { 
+  background: #141412; 
+  border: 1px solid rgba(255,255,255,.07); 
+} 
+ 
+.fabric-image { 
+  height: 460px; 
+  position: relative; 
+  background-size: cover; 
+  background-position: center; 
+  display: flex; 
+  align-items: flex-end; 
+  padding: 22px; 
+} 
+ 
+.fabric-image span { 
+  font: italic 28px var(--serif); 
+  text-shadow: 0 2px 15px #000; 
+} 
+ 
+.img-688 { 
+  background-image: 
+    linear-gradient(0deg, rgba(0,0,0,.55), transparent 55%), 
+    url('assets/688.jpg'); 
+} 
+ 
+.img-h { 
+  background-image: 
+    linear-gradient(0deg, rgba(0,0,0,.55), transparent 55%), 
+    url('assets/h-series.jpg'); 
+} 
+ 
+.img-v { 
+  background-image: 
+    linear-gradient(0deg, rgba(0,0,0,.55), transparent 55%), 
+    url('assets/vitrase.jpg'); 
+} 
+ 
+.card-meta { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 15px; 
+  padding: 22px; 
+} 
+ 
+.card-meta small { 
+  color: var(--gold); 
+  font-size: 9px; 
+  letter-spacing: 1.8px; 
+} 
+ 
+.card-meta h3 { 
+  font: 24px var(--serif); 
+  margin-top: 4px; 
+} 
+ 
+.card-meta p { 
+  color: var(--muted); 
+  font-size: 9px; 
+  line-height: 1.8; 
+  text-align: right; 
+  letter-spacing: 1px; 
+} 
+ 
+ 
+/* ========================================================= 
+   PRODUCT CATALOG 
+========================================================= */ 
+ 
+.catalog-products { 
+  display: grid; 
+  grid-template-columns: repeat(4,minmax(0,1fr)); 
+  gap: 24px; 
+  width: 100%; 
+  margin-top: 50px; 
+} 
+ 
+.product-card { 
+  min-width: 0; 
+  background: var(--cream-light); 
+  border-radius: 18px; 
+  padding: 22px; 
+  color: #332b25; 
+  overflow: hidden; 
+  box-shadow: 0 12px 35px rgba(0,0,0,.08); 
+} 
+ 
+.product-image { 
+  width: 100%; 
+  height: 250px; 
+  overflow: hidden; 
+  border-radius: 13px; 
+  background: #e8e2d8; 
+} 
+ 
+.product-image img { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; 
+  transition: opacity .25s ease, transform .35s ease; 
+} 
+ 
+.product-image img.changing { 
+  opacity: .35; 
+  transform: scale(1.02); 
+} 
+ 
+.product-code { 
+  display: flex; 
+  align-items: baseline; 
+  justify-content: center; 
+  gap: 12px; 
+  margin: 42px 0 28px; 
+} 
+ 
+.product-code span { 
+  font-size: 11px; 
+  letter-spacing: 2px; 
+  font-weight: 600; 
+  color: #948a80; 
+} 
+ 
+.product-code strong { 
+  font-family: var(--serif); 
+  font-size: 36px; 
+  font-weight: 400; 
+  color: #302923; 
+} 
+ 
+.color-title { 
+  width: 100%; 
+  min-height: 46px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 7px; 
+  background: #382f29; 
+  color: #fff; 
+  border-radius: 30px; 
+  font-size: 11px; 
+  letter-spacing: 1.8px; 
+  margin-bottom: 35px; 
+} 
+ 
+.color-title span { 
+  color: #c49a51; 
+  font-weight: 600; 
+} 
+ 
+.color-title b { 
+  font-weight: 700; 
+} 
+ 
+.color-options { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 17px; 
+  padding: 0 5px 8px; 
+} 
+ 
+.color-option { 
+  appearance: none; 
+  border: 0; 
+  background: transparent; 
+  width: 55px; 
+  padding: 0; 
+  margin: 0; 
+  cursor: pointer; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 7px; 
+  color: #9b9289; 
+  transition: transform .25s ease; 
+} 
+ 
+.color-option:hover { 
+  transform: translateY(-3px); 
+} 
+ 
+.color-option img { 
+  width: 48px; 
+  height: 48px; 
+  object-fit: cover; 
+  border-radius: 50%; 
+  display: block; 
+  border: 2px solid transparent; 
+  padding: 2px; 
+  background: var(--cream-light); 
+  transition: 
+    border-color .25s ease, 
+    transform .25s ease, 
+    box-shadow .25s ease; 
+} 
+ 
+.color-option span { 
+  font-family: var(--sans); 
+  font-size: 10px; 
+  font-weight: 600; 
+  letter-spacing: .5px; 
+} 
+ 
+.color-option.active { 
+  color: #302923; 
+} 
+ 
+.color-option.active img { 
+  border-color: #c4933f; 
+  box-shadow: 
+    0 0 0 2px var(--cream-light), 
+    0 0 0 3px #c4933f; 
+  transform: scale(1.05); 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT / KEUNGGULAN CHENMAN 
+========================================================= */ 
+ 
+.about-chenman { 
+  background: var(--cream-soft); 
+  color: var(--text-dark); 
+  padding: 120px 7%; 
+} 
+ 
+.about-chenman-inner { 
+  max-width: 1280px; 
+  margin: 0 auto; 
+} 
+ 
+.about-label { 
+  color: var(--gold-soft); 
+  font-size: 13px; 
+  font-weight: 700; 
+  letter-spacing: 2px; 
+  margin-bottom: 30px; 
+} 
+ 
+.about-chenman h2 { 
+  max-width: 1100px; 
+  margin: 0; 
+  font-family: var(--serif); 
+  font-size: clamp(42px,5vw,64px); 
+  font-weight: 400; 
+  line-height: 1.12; 
+  letter-spacing: -1.5px; 
+} 
+ 
+.about-chenman h2 em { 
+  color: var(--gold-soft); 
+  font-style: italic; 
+} 
+ 
+.about-title .title-word { 
+  display: inline-block; 
+  opacity: .12; 
+  transform: translateY(35px); 
+  transition: opacity .12s linear, transform .12s linear; 
+  will-change: opacity, transform; 
+} 
+ 
+.about-description { 
+  max-width: 1100px; 
+  margin: 25px 0 55px; 
+  color: #57514b; 
+  font-size: 17px; 
+  line-height: 1.8; 
+}
+ 
+.about-description .desc-word { 
+  display: inline-block; 
+  opacity: .15; 
+  transform: translateY(22px); 
+  transition: opacity .12s linear, transform .12s linear; 
+  will-change: opacity, transform; 
+} 
+ 
+.about-cards { 
+  display: grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap: 25px; 
+} 
+ 
+.about-card { 
+  background: #f8f7f5; 
+  border-radius: 8px; 
+  padding: 42px 28px; 
+  min-height: 230px; 
+  box-shadow: 0 15px 30px rgba(0,0,0,.04); 
+  transition: transform .2s ease, box-shadow .2s ease; 
+  will-change: transform; 
+} 
+ 
+.about-card:hover { 
+  box-shadow: 0 18px 35px rgba(0,0,0,.10); 
+} 
+
+
+/* =========================================================
+   VISION / MISSION INTERACTIVE CARD
+========================================================= */
+
+.vision-mission-cards {
+  align-items: stretch;
+}
+
+.vision-card {
+  position: relative;
+  min-width: 0;
+  min-height: 350px;
+
+  padding: 32px 28px;
+
+  background: var(--dark-soft);
+  border: 1px solid rgba(255,255,255,.10);
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform .4s cubic-bezier(.2,.8,.2,1),
+    border-color .35s ease,
+    background .35s ease,
+    box-shadow .4s ease;
+}
+
+
+/* GARIS AKSEN */
+
+.vision-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--gold);
+
+  transition: width .4s ease;
+}
+
+
+/* HOVER */
+
+.vision-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(201,146,69,.45);
+
+  background: #141411;
+}
+
+
+/* ACTIVE / DIKLIK */
+
+.vision-card.active {
+  transform: translateY(-12px) scale(1.025);
+
+  border-color: var(--gold);
+
+  background: #151512;
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.45),
+    0 0 0 1px rgba(201,146,69,.12);
+}
+
+.vision-card.active::before {
+  width: 100%;
+}
+
+
+/* ICON */
+
+.vision-icon {
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201,146,69,.45);
+
+  color: var(--gold);
+
+  margin-bottom: 28px;
+
+  transition:
+    background .35s ease,
+    border-color .35s ease,
+    transform .35s ease;
+}
+
+.vision-card.active .vision-icon {
+  background: rgba(201,146,69,.08);
+
+  border-color: var(--gold);
+
+  transform: scale(1.08);
+}
+
+
+/* SVG */
+
+.vision-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+
+  max-width: 22px !important;
+  max-height: 22px !important;
+
+  display: block;
+}
+
+
+/* TITLE */
+
+.vision-card-title {
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* GOLD LINE */
+
+.vision-card-line {
+  width: 35px;
+  height: 1px;
+
+  background: var(--gold);
+
+  margin: 14px 0 20px;
+
+  transition: width .4s ease;
+}
+
+.vision-card.active .vision-card-line {
+  width: 60px;
+}
+
+
+/* TEXT */
+
+.vision-card p,
+.vision-card li {
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  transition:
+    color .35s ease,
+    transform .35s ease;
+}
+
+.vision-card.active p,
+.vision-card.active li {
+  color: #c8c0b5;
+}
+
+.vision-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.vision-card li {
+  margin-bottom: 12px;
+}
+
+.vision-card li:last-child {
+  margin-bottom: 0;
+}
+
+.vision-card.active .vision-icon {
+  background: rgba(201,146,69,.08);
+  border-color: var(--gold);
+}
+
+.vision-card.active .vision-card-line {
+  width: 55px;
+  transition: width .35s ease;
+}
+ 
+.about-card > span { 
+  display: block; 
+  color: var(--gold-soft); 
+  font-family: var(--serif); 
+  font-size: 15px; 
+  font-style: italic; 
+  margin-bottom: 25px; 
+} 
+ 
+.about-card h3 { 
+  margin: 0 0 14px; 
+  color: #3a3028; 
+  font-family: var(--serif); 
+  font-size: 21px; 
+  font-weight: 400; 
+} 
+ 
+.about-card p { 
+  margin: 0; 
+  color: #858078; 
+  font-size: 14px; 
+  line-height: 1.6; 
+} 
+ 
+ 
+/* =========================================================
+   VITRASE CATALOG — COMPACT
+========================================================= */
+
+.catalog {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255,255,255,.45),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(183,143,77,.12),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #f3e6cf 0%,
+      #e8d2ad 45%,
+      #e9c894 100%
+    ) !important;
+  color: #5c4729;
+}
+
+.vitrase-catalog {
+  width: 92%;
+  max-width: 1250px;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+/* =========================
+   CODE PANEL
+========================= */
+
+.vitrase-codes {
+  padding: 20px;
+
+  background: linear-gradient(
+    145deg,
+    #f8f0e2,
+    #eee0c5
+  );
+
+  border: 1px solid rgba(185, 148, 83, 0.25);
+}
+
+.vitrase-codes-label {
+  margin-bottom: 14px;
+
+  color: #a68145;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CODE GRID
+========================= */
+
+.vitrase-code-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* =========================
+   CODE BUTTON
+========================= */
+
+.vitrase-code {
+  width: 100%;
+  aspect-ratio: 1 / .72;
+  border: 1px solid rgba(166,128,67,.2);
+  background: rgba(255,255,255,.42);
+  color: #725a32;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.vitrase-code:hover {
+  background: #fffaf1;
+  border-color: #c59a54;
+  transform: translateY(-2px);
+}
+
+.vitrase-code.active {
+  background: linear-gradient(
+    145deg,
+    #c9a15b,
+    #a97c38
+  );
+
+  color: #fffdf8;
+  border-color: #b88b45;
+
+  box-shadow:
+    0 6px 16px rgba(125,91,39,.18);
+}
+
+
+/* =========================================
+   LABEL 2 WARNA DI BAWAH FOTO
+========================================= */
+
+.vitrase-preview {
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vitrase-preview-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #eee3d2;
+}
+
+.vitrase-preview-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}object-position: center;
+
+
+/* WARNA KIRI */
+.vitrase-preview-code .color-left {
+  grid-column: 1;
+  text-align: center;
+
+  color: #8f6b36;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* WARNA KANAN */
+.vitrase-preview-code .color-right {
+  grid-column: 2;
+  text-align: center;
+
+  color: #8f6b36;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* KODE */
+.vitrase-preview-code strong {
+  grid-column: 1 / 3;
+  grid-row: 2;
+
+  text-align: center;
+
+  color: #6f5432;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================
+   CODE ON IMAGE
+========================= */
+
+.vitrase-preview-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  background: #eee3d2;
+  padding-bottom: 65px;
+}
+
+.vitrase-preview-code {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 65px;
+  padding: 9px 20px 7px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+
+  background: #eee3d2;
+}
+
+.vitrase-preview-code .color-left,
+.vitrase-preview-code .color-right {
+  color: #8f6b36;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.vitrase-preview-code .color-left {
+  grid-column: 1;
+}
+
+.vitrase-preview-code .color-right {
+  grid-column: 2;
+}
+
+.vitrase-preview-code strong {
+  grid-column: 1 / 3;
+  grid-row: 2;
+
+  color: #6f5432;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .vitrase-catalog {
+    margin-top: 25px;
+    gap: 14px;
+  }
+
+  .vitrase-codes {
+    padding: 15px;
+  }
+
+  .vitrase-code-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .vitrase-code {
+    font-size: 10px;
+  }
+
+  .vitrase-preview-image {
+    min-height: 250px;
+  }
+
+  .vitrase-preview-code {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .vitrase-preview-code strong {
+    font-size: 28px;
+  }
+
+}
+ 
+/* =========================================================
+   PROJECTS — AUTO MOVING SLIDER
+========================================================= */
+
+.projects {
+  background: var(--dark-soft);
+  overflow: hidden;
+}
+
+/* HEADER PROJECT */
+.projects .section-head {
+  position: relative;
+  z-index: 3;
+}
+
+/* AREA SLIDER */
+.project-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+
+  /* efek fade kiri-kanan */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+}
+
+/* TRACK YANG BERGERAK */
+.project-track {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  width: max-content;
+
+  animation: projectAutoMove 28s linear infinite;
+
+  will-change: transform;
+}
+
+/* ITEM PROJECT */
+.project {
+  flex: 0 0 420px;
+  width: 420px;
+  height: 420px;
+
+  min-height: 0;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 25px;
+
+  background-size: cover;
+  background-position: center;
+
+  isolation: isolate;
+}
+
+/* OVERLAY */
+.project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.72),
+      rgba(0,0,0,.08) 60%,
+      transparent 100%
+    );
+
+  z-index: 0;
+}
+
+/* TEKS PROJECT */
+.project span {
+  position: relative;
+  z-index: 2;
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   PROJECTS VITRASE — WHITE BACKGROUND
+========================================================= */
+
+.projects-vitrase {
+  background: #ffffff;
+  color: #272726;
+}
+
+/* Judul dan label */
+.projects-vitrase .section-label {
+  color: #d6b24e;
+}
+
+.projects-vitrase h2 {
+  color: #20201f;
+}
+
+.projects-vitrase .project-note {
+  color: #777;
+}
+
+/* =========================================================
+   VITRASE PROJECT — WARM CREAM / CHAMPAGNE GOLD
+========================================================= */
+
+.projects-vitrase .project {
+  background-color: #ead9b8;
+}
+
+.projects-vitrase .project::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 252, 242, 0.08) 0%,
+      rgba(235, 216, 177, 0.22) 45%,
+      rgba(177, 137, 70, 0.72) 100%
+    );
+}
+
+.projects-vitrase .project span {
+  color: #fffdf7;
+  text-shadow: 0 1px 8px rgba(70, 50, 20, 0.25);
+}
+
+/* =========================================================
+   PROJECT IMAGES VITRASE DAN GORDEN
+========================================================= */
+.g1 {
+  background-image: url('assets/gorden 1.jpeg');
+}
+
+.g2 {
+  background-image: url('assets/gorden 2.jpeg');
+}
+
+.g3 {
+  background-image: url('assets/gorden 3.jpeg');
+}
+
+
+.v1 {
+  background-image: url('assets/vitrase 1.jpeg');
+}
+
+.v2 {
+  background-image: url('assets/vitrase 2.jpeg');
+}
+
+.v3 {
+  background-image: url('assets/vitrase 3.jpeg');
+}
+
+/* =========================================================
+   AUTO LOOP
+========================================================= */
+
+@keyframes projectAutoMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+
+}
+
+.projects-vitrase .project-track {
+  animation-name: projectVitraseMove;
+}
+
+/* Gerak dari kiri ke kanan */
+@keyframes projectVitraseMove {
+  from {
+    transform: translateX(calc(-50% - 8px));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* PAUSE SAAT MOUSE DI ATAS */
+.project-slider:hover .project-track {
+  animation-play-state: paused;
+}
+
+/* =========================================================
+   PROJECT NOTE
+========================================================= */
+
+.project-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .project-slider {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .project-track {
+    gap: 14px;
+    animation-duration: 24s;
+  }
+
+  .project {
+    flex-basis: 360px;
+    width: 360px;
+    height: 400px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .project-slider {
+    margin-top: 5px;
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+  }
+
+  .project-track {
+    gap: 12px;
+    animation-duration: 20s;
+  }
+
+  .project {
+    flex-basis: 78vw;
+    width: 78vw;
+    height: 430px;
+    padding: 22px;
+  }
+
+  .project span {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+}
+ 
+/* =========================================================
+   CONTACT — PREMIUM SOCIAL LINKS
+========================================================= */
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 34px;
+  max-width: 760px;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 58px;
+
+  padding: 8px 14px 8px 8px;
+
+  /* SEMUA BORDER CHAMPAGNE */
+  border: 1px solid rgba(201, 161, 91, 0.55);
+
+  background: rgba(255, 255, 255, 0.015);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  transition:
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.contact-item:hover {
+  border-color: #c9a15b;
+
+  background: rgba(201, 161, 91, 0.055);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(201, 161, 91, 0.55);
+
+  color: #c9a15b;
+}
+
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  white-space: nowrap;
+}
+
+
+.contact-info small {
+  color: #c9a15b;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  line-height: 1;
+}
+
+
+.contact-info strong {
+  color: #f5f1e9;
+
+  font-family: var(--sans);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.contact-arrow {
+  margin-left: 8px;
+
+  color: #c9a15b;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .contact-box {
+    gap: 8px;
+
+    max-width: 100%;
+  }
+
+
+  .contact-item {
+    min-height: 54px;
+
+    padding: 7px 11px 7px 7px;
+
+    gap: 10px;
+  }
+
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+
+  .contact-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .contact-info small {
+    font-size: 6px;
+    letter-spacing: 2px;
+  }
+
+
+  .contact-info strong {
+    font-size: 11px;
+  }
+
+
+  .contact-arrow {
+    margin-left: 4px;
+
+    font-size: 14px;
+  }
+
+}
+ 
+/* ========================================================= 
+   FOOTER 
+========================================================= */ 
+ 
+footer { 
+  padding: 25px 7%; 
+  border-top: 1px solid var(--line); 
+  display: flex; 
+  justify-content: space-between; 
+  color: #777; 
+  font-size: 9px; 
+  letter-spacing: 1.5px; 
+} 
+ 
+footer a { 
+  color: #aaa; 
+  text-decoration: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE — 1050px 
+========================================================= */ 
+ 
+@media (max-width: 1050px) { 
+  .catalog-products { 
+    grid-template-columns: repeat(2,minmax(0,1fr)); 
+  } 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE — 900px 
+========================================================= */ 
+ 
+@media (max-width: 900px) { 
+ 
+  .desktop-nav { 
+    display: none; 
+  } 
+ 
+  .site-header { 
+    padding: 0 5%; 
+  } 
+ 
+  .hero-content { 
+    margin-left: 5%; 
+    width: 90%; 
+  } 
+ 
+  .hero-caption { 
+    display: none; 
+  } 
+ 
+  .section { 
+    padding: 85px 5%; 
+  } 
+ 
+  .intro, 
+  .catalog, 
+  .cta { 
+    grid-template-columns: 1fr; 
+  } 
+ 
+  .cards { 
+    grid-template-columns: 1fr; 
+  } 
+ 
+  .fabric-image { 
+    height: 520px; 
+  } 
+ 
+  .project-grid { 
+    grid-template-columns: 1fr; 
+  } 
+ 
+  .project { 
+    min-height: 350px; 
+  } 
+ 
+  .swatches { 
+    margin-top: 20px; 
+  } 
+ 
+  /* TEAM */ 
+ 
+  .team-section { 
+    padding: 0 5% 85px; 
+  } 
+ 
+  .team-photo { 
+    height: 500px; 
+  } 
+ 
+  /* KONSULTASI */ 
+ 
+  .sales-section { 
+    padding: 85px 5%; 
+    background: var(--cream) !important; 
+  } 
+ 
+  .consultation-feature { 
+    gap: 14px; 
+  } 
+ 
+  .consultation-grid { 
+    grid-template-columns: repeat(4,1fr); 
+    gap: 12px; 
+  } 
+ 
+  /* ABOUT */ 
+ 
+  .about-chenman { 
+    padding: 85px 5%; 
+  } 
+ 
+  .about-cards { 
+    grid-template-columns: repeat(2,1fr); 
+  } 
+ 
+  .about-card:last-child { 
+    grid-column: span 2; 
+  } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE — 680px 
+========================================================= */ 
+ 
+@media (max-width: 680px) { 
+ 
+  .catalog-products { 
+    grid-template-columns: 1fr; 
+    gap: 25px; 
+  } 
+ 
+  .product-card { 
+    padding: 18px; 
+  } 
+ 
+  .product-image { 
+    height: 230px; 
+  } 
+ 
+  .product-code { 
+    margin-top: 30px; 
+  } 
+ 
+  .color-options { 
+    gap: 15px; 
+  } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE — 600px 
+========================================================= */ 
+ 
+@media (max-width: 600px) { 
+ 
+  .outline-btn { 
+    display: none; 
+  } 
+ 
+  .hero h1 { 
+    font-size: 48px; 
+  } 
+ 
+  .lead { 
+    font-size: 14px; 
+  } 
+ 
+  .section h2 { 
+    font-size: 43px; 
+  } 
+ 
+  .section-head { 
+    align-items: start; 
+    flex-direction: column; 
+  } 
+ 
+  /* TEAM */ 
+ 
+  .team-section { 
+    padding: 0 22px 65px; 
+  } 
+ 
+  .team-photo { 
+    height: 300px; 
+  } 
+ 
+  /* KONSULTASI */ 
+ 
+  .sales-section { 
+    padding: 65px 22px 75px; 
+    background: var(--cream) !important; 
+  } 
+ 
+  .consultation-feature { 
+    grid-template-columns: repeat(3,1fr); 
+    gap: 8px; 
+    margin-bottom: 12px; 
+  } 
+ 
+  .consultation-feature img { 
+    border-radius: 7px; 
+  } 
+ 
+  .consultation-grid { 
+    grid-template-columns: repeat(2,1fr); 
+    gap: 9px; 
+  } 
+ 
+  .consultation-grid img { 
+    border-radius: 7px; 
+  } 
+ 
+  /* ABOUT */ 
+ 
+  .about-chenman { 
+    padding: 65px 22px; 
+  } 
+ 
+  .about-chenman h2 { 
+    font-size: 38px; 
+  } 
+ 
+  .about-description { 
+    font-size: 15px; 
+  } 
+ 
+  .about-cards { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+  } 
+ 
+  .about-card:last-child { 
+    grid-column: auto; 
+  } 
+ 
+  /* SWATCHES */ 
+ 
+  .swatches { 
+    grid-template-columns: 1fr 1fr; 
+  } 
+ 
+  .swatch { 
+    height: 140px; 
+  } 
+ 
+  /* FOOTER */ 
+ 
+  footer { 
+    flex-direction: column; 
+    gap: 10px; 
+  } 
+ 
+} 
+ 
+ 
+/* =========================================================
+   FORCE CONSULTATION AREA TO CREAM
+========================================================= */
+
+.sales-section,
+section.sales-section,
+section:has(.consultation-feature),
+section:has(.consultation-grid) {
+  width: 100%;
+  background: var(--cream) !important;
+  color: var(--text-dark) !important;
+}
+
+/* =====================================================
+   SCRIPT ANIMATION
+===================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* HEADER SCROLL */
+
+.site-header {
+  transition:
+    background .3s ease,
+    box-shadow .3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(5,5,4,.96);
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+  position: fixed;
+  top: 72px;
+  right: 22px;
+  left: 22px;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  background: #11110f;
+  border: 1px solid rgba(255,255,255,.1);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease,
+    transform .25s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  padding: 18px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.mobile-menu a:last-child {
+  border-bottom: 0;
+}
+
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+
+/* MENU ICON */
+
+.menu-btn i {
+  transition:
+    transform .25s ease,
+    opacity .25s ease;
+}
+
+.menu-btn.active i:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-btn.active i:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+
+/* IMAGE CHANGE */
+
+.product-image img.changing {
+  opacity: .35;
+  transform: scale(1.02);
+}
+
+
+/* BROKEN IMAGE */
+
+.image-error {
+  opacity: .3;
+}
+
+/* =========================================================
+   FIX VISION & MISSION LAYOUT
+========================================================= */
+
+section.vision-mission-section {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+}
+
+section.vision-mission-section .vision-mission-content {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 8%;
+  align-items: center;
+}
+
+section.vision-mission-section .vision-mission-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+section.vision-mission-section .vision-card {
+  min-width: 0;
+  min-height: 350px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  section.vision-mission-section .vision-mission-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  section.vision-mission-section .vision-mission-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  section.vision-mission-section .vision-mission-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================
+   VISION CARD — 3D CLICK EFFECT
+========================================= */
+
+/* ruang perspektif */
+.vision-mission-cards {
+  perspective: 1200px;
+}
+
+/* kondisi normal */
+.vision-card {
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform:
+    perspective(1200px)
+    translateY(0)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1);
+
+  transition:
+    transform .55s cubic-bezier(.16, 1, .3, 1),
+    box-shadow .55s cubic-bezier(.16, 1, .3, 1),
+    border-color .35s ease,
+    background .35s ease;
+
+  will-change: transform, box-shadow;
+}
+
+/* =========================================
+   SAAT DIKLIK
+========================================= */
+
+.vision-card.active {
+  transform:
+    perspective(1200px)
+    translateY(-24px)
+    rotateX(4deg)
+    rotateY(-3deg)
+    scale(1.045);
+
+  border-color: var(--gold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c18 0%,
+      #151512 55%,
+      #10100e 100%
+    );
+
+  box-shadow:
+    /* bayangan paling dekat */
+    0 8px 12px rgba(0, 0, 0, .25),
+
+    /* bayangan kedua */
+    0 18px 30px rgba(0, 0, 0, .30),
+
+    /* bayangan utama */
+    0 35px 60px rgba(0, 0, 0, .50),
+
+    /* ambient shadow */
+    0 55px 100px rgba(0, 0, 0, .30),
+
+    /* garis tipis emas */
+    0 0 0 1px rgba(201, 146, 69, .18),
+
+    /* glow halus */
+    0 0 40px rgba(201, 146, 69, .08);
+
+  z-index: 10;
+}
+
+/* =========================================
+   PERMUKAAN DEPAN KARTU
+========================================= */
+
+.vision-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.08),
+      transparent 35%
+    );
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity .45s ease;
+}
+
+.vision-card.active::after {
+  opacity: 1;
+}
+
+/* =========================================
+   ICON IKUT TERANGKAT
+========================================= */
+
+.vision-card .vision-icon {
+  position: relative;
+  z-index: 2;
+
+  transform:
+    translateZ(0)
+    scale(1);
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    background .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.vision-card.active .vision-icon {
+  transform:
+    translateZ(28px)
+    scale(1.15);
+
+  background: rgba(201,146,69,.10);
+  border-color: var(--gold);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.35),
+    0 0 20px rgba(201,146,69,.10);
+}
+
+/* =========================================
+   TEKS JUGA MUNCUL KE DEPAN
+========================================= */
+
+.vision-card-title,
+.vision-card-line,
+.vision-card p,
+.vision-card ul {
+  position: relative;
+  z-index: 2;
+
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    color .35s ease;
+}
+
+.vision-card.active .vision-card-title {
+  transform: translateZ(18px);
+}
+
+.vision-card.active .vision-card-line {
+  width: 70px;
+  transform: translateZ(16px);
+}
+
+.vision-card.active p,
+.vision-card.active ul {
+  transform: translateZ(12px);
+}
+
+.vision-card.active p,
+.vision-card.active li {
+  color: #d2cbc0;
+}
+
+/* =========================================
+   GARIS EMAS BAWAH
+========================================= */
+
+.vision-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: var(--gold);
+
+  transition:
+    width .5s cubic-bezier(.16,1,.3,1);
+}
+
+.vision-card.active::before {
+  width: 100%;
+}
+
+/* =========================================
+   HOVER — LEBIH RINGAN DARI ACTIVE
+========================================= */
+
+@media (hover: hover) {
+
+  .vision-card:hover:not(.active) {
+    transform:
+      perspective(1200px)
+      translateY(-8px)
+      rotateX(2deg)
+      rotateY(-1deg)
+      scale(1.015);
+
+    border-color: rgba(201,146,69,.35);
+
+    box-shadow:
+      0 12px 25px rgba(0,0,0,.25),
+      0 25px 45px rgba(0,0,0,.18);
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .vision-mission-cards {
+    perspective: 900px;
+  }
+
+  .vision-card.active {
+    transform:
+      perspective(900px)
+      translateY(-14px)
+      rotateX(2deg)
+      rotateY(-1deg)
+      scale(1.025);
+
+    box-shadow:
+      0 10px 20px rgba(0,0,0,.30),
+      0 25px 50px rgba(0,0,0,.45),
+      0 0 0 1px rgba(201,146,69,.15);
+  }
+
+}
+
+/* =========================================================
+   VISION & MISSION — CREAM
+========================================================= */
+
+section.vision-mission-section {
+  background: var(--cream);
+  color: var(--text-dark);
+}
+
+/* Label */
+section.vision-mission-section .section-label {
+  color: var(--text-dark);
+}
+
+section.vision-mission-section .vision-mission-line {
+  background: rgba(48,40,32,.18);
+}
+
+/* Heading */
+section.vision-mission-section .vision-mission-intro h2 {
+  color: var(--text-dark);
+}
+
+section.vision-mission-section .vision-mission-intro h2 em {
+  color: var(--gold);
+}
+
+/* Cards */
+section.vision-mission-section .vision-card {
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8 0%,
+      #f3ede2 100%
+    );
+
+  border: 1px solid rgba(48,40,32,.12);
+
+  box-shadow:
+    0 10px 25px rgba(48,40,32,.08);
+}
+
+/* Card title */
+section.vision-mission-section .vision-card-title {
+  color: var(--text-dark);
+}
+
+/* Card text */
+section.vision-mission-section .vision-card p,
+section.vision-mission-section .vision-card li {
+  color: #756d63;
+}
+
+/* Icon */
+section.vision-mission-section .vision-icon {
+  color: var(--gold);
+  border-color: rgba(201,146,69,.45);
+}
+
+/* Active card */
+section.vision-mission-section .vision-card.active {
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8 0%,
+      #eee5d6 100%
+    );
+
+  border-color: var(--gold);
+
+  box-shadow:
+    0 12px 25px rgba(48,40,32,.12),
+    0 30px 60px rgba(48,40,32,.16),
+    0 0 0 1px rgba(201,146,69,.12);
+}
+
+/* Active title */
+section.vision-mission-section
+.vision-card.active .vision-card-title {
+  color: var(--gold);
+}
+
+/* Active text */
+section.vision-mission-section
+.vision-card.active p,
+section.vision-mission-section
+.vision-card.active li {
+  color: #5f574e;
+}
+
+/* Hover */
+@media (hover: hover) {
+  section.vision-mission-section
+  .vision-card:hover:not(.active) {
+    border-color: rgba(201,146,69,.38);
+
+    box-shadow:
+      0 14px 30px rgba(48,40,32,.12),
+      0 28px 55px rgba(48,40,32,.10);
+  }
+}
+
+/* =========================================================
+   CONSULTATION STAFF — PREMIUM
+========================================================= */
+
+.consultation-feature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 42px;
+}
+
+
+/* STAFF UTAMA */
+
+.consultant-card {
+  text-align: center;
+}
+
+.consultant-photo {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.consultant-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: #e8e0d4;
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+}
+
+.consultant-photo:hover img {
+  transform: scale(1.025);
+}
+
+
+/* NAMA */
+
+.consultant-info {
+  padding-top: 18px;
+}
+
+.consultant-info h3 {
+  margin: 0;
+  color: var(--text-dark);
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.consultant-info p {
+  margin: 6px 0 14px;
+  color: #8a8175;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* WHATSAPP */
+
+.consultant-wa {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.consultant-wa a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 9px 16px;
+
+  background: #25D366;
+  color: #fff;
+
+  border: 1px solid #25D366;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .5px;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.consultant-wa a:hover {
+  background: #20bd5a;
+  border-color: #20bd5a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,211,102,.25);
+}
+
+
+/* =========================================================
+   STAFF BAWAH
+========================================================= */
+
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px 24px;
+  align-items: start;
+}
+
+.staff-card {
+  text-align: center;
+}
+
+.staff-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #e8e0d4;
+}
+
+.staff-card h4 {
+  margin: 0;
+  color: var(--text-dark);
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.staff-card span {
+  display: block;
+  margin-top: 4px;
+  color: #999084;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .consultation-feature {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .consultation-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 12px;
+  }
+
+  .staff-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .consultation-feature {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .consultation-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 8px;
+  }
+
+  .staff-card img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .consultant-info h3 {
+    font-size: 19px;
+  }
+
+  .consultant-wa a {
+    width: 100%;
+  }
+
+}
+
+/* BACKGROUND KAIN UNTUK SECTION KONSULTASI */
+#konsultasi {
+  position: relative !important;
+  overflow: hidden !important;
+
+  background-image: url("assets/bg-sal.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  background-color: #FFE4B5 !important;
+}
+
+#konsultasi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 228, 181, 0.15);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#konsultasi > * {
+  position: relative;
+  z-index: 1;
+}
