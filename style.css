@@ -3576,11 +3576,11 @@ section.vision-mission-section
 }
 
 /* =========================================================
-   FIX MOBILE — KONSULTASI TIDAK TERTUTUP HEADER
+   FIX ANCHOR MOBILE — KONSULTASI TIDAK TERTUTUP HEADER
 ========================================================= */
 
 @media (max-width: 600px) {
   #konsultasi {
-    padding-top: 130px !important;
+    scroll-margin-top: 170px !important;
   }
 }
