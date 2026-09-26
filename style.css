@@ -3576,11 +3576,23 @@ section.vision-mission-section
 }
 
 /* =========================================================
-   FIX ANCHOR MOBILE — KONSULTASI TIDAK TERTUTUP HEADER
+   FOTO ADMIN SALES — HP PORTRAIT
+   TAMPIL UTUH, TIDAK TERPOTONG
 ========================================================= */
 
-@media (max-width: 600px) {
-  #konsultasi {
-    scroll-margin-top: 190px !important;
+@media screen and (max-width: 600px) and (orientation: portrait) {
+
+  .consultant-photo {
+    height: auto !important;
+    aspect-ratio: auto !important;
   }
+
+  .consultant-photo img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
 }
