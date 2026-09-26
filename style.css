@@ -1023,15 +1023,13 @@ section.vision-mission-section
    FOTO KONSULTASI / KARYAWAN 
 ========================================================= */ 
  
- .sales-section {
+.sales-section {
   width: 100%;
   padding: 45px 5% 50px;
-
   background-image: url("assets/bg-sal.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   color: var(--text-dark);
   border-radius: 24px;
   position: relative;
@@ -1052,14 +1050,16 @@ section.vision-mission-section
   z-index: 1;
 }
 
-.consultant-photo img {
+.consultation-feature img {
   width: 100%;
   height: 462px;
+  aspect-ratio: auto;
   display: block;
-  aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: center;
-  background: transparent;
+  border-radius: 10px;
+  background: #e8e0d4;
+
   transition:
     transform .45s ease,
     box-shadow .45s ease;
@@ -1092,7 +1092,6 @@ section.vision-mission-section
   border-radius: 50%;
   display: block;
   margin: 0 auto 10px;
-
   transition:
     transform .35s ease,
     box-shadow .35s ease;
@@ -1121,6 +1120,7 @@ section.vision-mission-section
 
 }
 
+
 /* MOBILE */
 
 @media (max-width: 600px) {
@@ -1132,20 +1132,22 @@ section.vision-mission-section
   }
 
   .consultation-feature {
-  grid-template-columns: 1fr;
-  width: 100%;
-  max-width: 100%;
-  gap: 30px;
-}
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    gap: 30px;
+  }
 
-  .consultant-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-  max-height: none;
-}
-  
+  .consultation-feature img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
   .consultation-grid {
     grid-template-columns: repeat(3, 80px);
     column-gap: 25px;
@@ -1158,7 +1160,6 @@ section.vision-mission-section
   }
 
 }
- 
 /* ========================================================= 
    COLLECTION 
 ========================================================= */ 
