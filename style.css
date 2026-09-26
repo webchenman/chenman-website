@@ -3575,23 +3575,24 @@ section.vision-mission-section
 
 }
 
-/* =========================================================
-   FOTO ADMIN SALES — HP PORTRAIT
-   TAMPIL UTUH, TIDAK TERPOTONG
-========================================================= */
-
+/* FOTO ADMIN SALES — HP PORTRAIT */
 @media screen and (max-width: 600px) and (orientation: portrait) {
 
   .consultant-photo {
-    height: auto !important;
-    aspect-ratio: auto !important;
+    width: 100% !important;
+    aspect-ratio: 4 / 5 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #e8e0d4 !important;
   }
 
   .consultant-photo img {
     width: 100% !important;
-    height: auto !important;
-    aspect-ratio: auto !important;
-    object-fit: contain !important;
+    height: 100% !important;
+    display: block !important;
+
+    /* foto tetap utuh, tidak crop */
+    object-fit: fill !important;
     object-position: center !important;
   }
 
