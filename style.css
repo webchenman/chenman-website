@@ -3282,11 +3282,13 @@ section.vision-mission-section
 
 .consultant-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
   display: block;
-  object-fit: cover;
+  aspect-ratio: auto;
+  object-fit: contain;
   object-position: center;
-  background: #e8e0d4;
+  background: transparent;
+
   transition:
     transform .45s ease,
     box-shadow .45s ease;
@@ -3571,35 +3573,6 @@ section.vision-mission-section
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-}
-
-/* =========================================================
-   FOTO ADMIN SALES — HP
-   FULL FOTO, TANPA CROP, TANPA SISA KOSONG
-========================================================= */
-
-@media screen and (max-width: 600px) {
-
-  .consultant-photo {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: auto !important;
-    overflow: hidden !important;
-    display: block !important;
-    border-radius: 12px !important;
-    background: transparent !important;
-  }
-
-  .consultant-photo img {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: auto !important;
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    border-radius: 12px !important;
   }
 
 }
