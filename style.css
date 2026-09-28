@@ -1734,11 +1734,13 @@ section.vision-mission-section
       rgba(255,255,255,.45),
       transparent 35%
     ),
+
     radial-gradient(
       circle at 85% 80%,
       rgba(183,143,77,.12),
       transparent 40%
     ),
+
     linear-gradient(
       135deg,
       #f3e6cf 0%,
@@ -1748,23 +1750,36 @@ section.vision-mission-section
   color: #5c4729;
 }
 
+/* =========================================================
+   JUDUL 07 / KOLEKSI VITRASE
+   TETAP DI ATAS KOTAK
+========================================================= */
+#koleksi-vitrase .catalog-copy {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto 12px;
+}
+
+/* =========================================================
+   VITRASE CATALOG
+========================================================= */
 .vitrase-catalog {
   width: 92%;
   max-width: 1250px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 14px;
   align-items: stretch;
 }
-
-/* =========================
+/* =========================================================
    CODE PANEL
-========================= */
-
+========================================================= */
 .vitrase-codes {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 20px;
-
   background: linear-gradient(
     145deg,
     #f8f0e2,
@@ -1774,18 +1789,19 @@ section.vision-mission-section
   border: 1px solid rgba(185, 148, 83, 0.25);
 }
 
+/* LABEL PILIH KODE */
 .vitrase-codes-label {
   margin-bottom: 14px;
-
   color: #a68145;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-/* =========================
+
+/* =========================================================
    CODE GRID
-========================= */
+========================================================= */
 
 .vitrase-code-grid {
   display: grid;
@@ -1793,9 +1809,9 @@ section.vision-mission-section
   gap: 8px;
 }
 
-/* =========================
+/* =========================================================
    CODE BUTTON
-========================= */
+========================================================= */
 
 .vitrase-code {
   width: 100%;
@@ -1815,11 +1831,15 @@ section.vision-mission-section
     transform .2s ease;
 }
 
+/* HOVER */
+
 .vitrase-code:hover {
   background: #fffaf1;
   border-color: #c59a54;
   transform: translateY(-2px);
 }
+
+/* ACTIVE */
 
 .vitrase-code.active {
   background: linear-gradient(
@@ -1830,15 +1850,13 @@ section.vision-mission-section
 
   color: #fffdf8;
   border-color: #b88b45;
-
   box-shadow:
     0 6px 16px rgba(125,91,39,.18);
 }
 
-
-/* =========================================
-   LABEL 2 WARNA DI BAWAH FOTO
-========================================= */
+/* =========================================================
+   PREVIEW
+========================================================= */
 
 .vitrase-preview {
   min-width: 0;
@@ -1846,67 +1864,9 @@ section.vision-mission-section
   height: 100%;
 }
 
-.vitrase-preview-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
-  background: #eee3d2;
-}
-
-.vitrase-preview-image img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}object-position: center;
-
-
-/* WARNA KIRI */
-.vitrase-preview-code .color-left {
-  grid-column: 1;
-  text-align: center;
-
-  color: #8f6b36;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* WARNA KANAN */
-.vitrase-preview-code .color-right {
-  grid-column: 2;
-  text-align: center;
-
-  color: #8f6b36;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* KODE */
-.vitrase-preview-code strong {
-  grid-column: 1 / 3;
-  grid-row: 2;
-
-  text-align: center;
-
-  color: #6f5432;
-  font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-/* =========================
-   CODE ON IMAGE
-========================= */
+/* =========================================================
+   PREVIEW IMAGE
+========================================================= */
 
 .vitrase-preview-image {
   position: relative;
@@ -1916,7 +1876,23 @@ section.vision-mission-section
   overflow: hidden;
   background: #eee3d2;
   padding-bottom: 65px;
+  box-sizing: border-box;
 }
+
+/* GAMBAR */
+.vitrase-preview-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================================
+   LABEL WARNA + KODE
+========================================================= */
 
 .vitrase-preview-code {
   position: absolute;
@@ -1924,19 +1900,18 @@ section.vision-mission-section
   left: 0;
   right: 0;
   bottom: 0;
-
   height: 65px;
   padding: 9px 20px 7px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
-
   background: #eee3d2;
 }
 
-.vitrase-preview-code .color-left,
-.vitrase-preview-code .color-right {
+/* WARNA KIRI */
+
+.vitrase-preview-code .color-left {
+  grid-column: 1;
   color: #8f6b36;
   font-size: 13px;
   font-weight: 600;
@@ -1945,18 +1920,21 @@ section.vision-mission-section
   text-align: center;
 }
 
-.vitrase-preview-code .color-left {
-  grid-column: 1;
-}
-
+/* WARNA KANAN */
 .vitrase-preview-code .color-right {
   grid-column: 2;
+  color: #8f6b36;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
 }
+/* KODE */
 
 .vitrase-preview-code strong {
   grid-column: 1 / 3;
   grid-row: 2;
-
   color: #6f5432;
   font-family: var(--serif);
   font-size: 20px;
@@ -1964,46 +1942,49 @@ section.vision-mission-section
   line-height: 1;
   text-align: center;
 }
-
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-  .vitrase-catalog {
-    margin-top: 25px;
-    gap: 14px;
+  #koleksi-vitrase .catalog-copy {
+    width: calc(100% - 30px);
+    margin: 0 auto 12px;
+
   }
 
+  .vitrase-catalog {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
   .vitrase-codes {
     padding: 15px;
   }
-
   .vitrase-code-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
   }
-
   .vitrase-code {
     font-size: 10px;
   }
-
+  .vitrase-preview {
+    width: 100%;
+  }
   .vitrase-preview-image {
     min-height: 250px;
   }
-
   .vitrase-preview-code {
-    left: 15px;
-    bottom: 15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
-
   .vitrase-preview-code strong {
-    font-size: 28px;
+    font-size: 20px;
   }
-
 }
- 
 /* =========================================================
    PROJECTS — AUTO MOVING SLIDER
 ========================================================= */
