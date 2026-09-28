@@ -2128,6 +2128,48 @@
     STAR02
   </button>
 
+  <div class="vitrase-code-grid">
+
+  <!-- semua button D-06 sampai STAR02 -->
+
+</div>
+
+
+<!-- TAMBAHKAN INI -->
+<div class="vitrase-preview">
+
+  <div class="vitrase-preview-image">
+
+    <img
+      id="vitrasePreviewImage"
+      src="assets/vitrase/d-06.png"
+      alt="Vitrase Chenman D-06"
+    >
+
+    <div class="vitrase-preview-overlay"></div>
+
+    <div class="vitrase-preview-code">
+
+      <span class="color-left" id="vitraseColorLeft">
+        White
+      </span>
+
+      <span class="color-right" id="vitraseColorRight">
+        Off White
+      </span>
+
+      <strong id="vitrasePreviewCode">
+        D-06
+      </strong>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
 </div>
     <!-- =========================================
          08 / KEUNGGULAN
@@ -2554,6 +2596,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const code = this.dataset.code;
       const image = this.dataset.image;
 
+      /* Ambil warna dari data HTML */
+      const leftColor = this.dataset.colorLeft || "White";
+      const rightColor = this.dataset.colorRight || "Off White";
+
       if (!image) return;
 
       /* Tombol aktif */
@@ -2566,19 +2612,19 @@ document.addEventListener("DOMContentLoaded", function () {
       /* Ganti kode */
       previewCode.textContent = code;
 
-      /* Nama warna */
+      /* Ganti nama warna */
       if (colorLeft) {
-        colorLeft.textContent = "White";
+        colorLeft.textContent = leftColor;
       }
 
       if (colorRight) {
-        colorRight.textContent = "Off White";
+        colorRight.textContent = rightColor;
       }
 
       /* Efek gambar */
       previewImage.classList.add("is-changing");
 
-      /* Langsung ganti gambar */
+      /* Ganti gambar */
       previewImage.src = image;
       previewImage.alt = "Vitrase Chenman kode " + code;
 
