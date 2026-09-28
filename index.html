@@ -2525,7 +2525,7 @@
   <!-- JAVASCRIPT -->
  <script src="script.js"></script>
 
-<script>
+  <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const buttons = document.querySelectorAll(".vitrase-code");
@@ -2534,53 +2534,57 @@ document.addEventListener("DOMContentLoaded", function () {
   const colorLeft = document.getElementById("vitraseColorLeft");
   const colorRight = document.getElementById("vitraseColorRight");
 
-  if (!buttons.length || !previewImage || !previewCode) {
-    return;
-  }
+  if (!buttons.length || !previewImage || !previewCode) return;
 
   buttons.forEach(function (button) {
 
-    button.addEventListener("click", function () {
+    button.addEventListener("pointerup", function (e) {
 
-      const code = button.dataset.code;
-      const image = button.dataset.image;
+      e.preventDefault();
+
+      const code = this.dataset.code;
+      const image = this.dataset.image;
+
+      if (!image) return;
 
       /* Tombol aktif */
       buttons.forEach(function (item) {
         item.classList.remove("active");
       });
 
-      button.classList.add("active");
+      this.classList.add("active");
 
-      /* Efek pergantian gambar */
+      /* Ganti kode */
+      previewCode.textContent = code;
+
+      /* Nama warna */
+      if (colorLeft) {
+        colorLeft.textContent = "White";
+      }
+
+      if (colorRight) {
+        colorRight.textContent = "Off White";
+      }
+
+      /* Efek gambar */
       previewImage.classList.add("is-changing");
 
-      setTimeout(function () {
+      /* Langsung ganti gambar */
+      previewImage.src = image;
+      previewImage.alt = "Vitrase Chenman kode " + code;
 
-        previewImage.src = image;
-        previewImage.alt = "Vitrase Chenman kode " + code;
+      previewImage.onload = function () {
+        previewImage.classList.remove("is-changing");
+      };
 
-        /* Ganti kode */
-        previewCode.textContent = code;
+      previewImage.onerror = function () {
+        previewImage.classList.remove("is-changing");
 
-        /* SEMUA VITRASE = WHITE + OFF WHITE */
-        colorLeft.textContent = "White";
-        colorRight.textContent = "Off White";
-
-        previewImage.onload = function () {
-          previewImage.classList.remove("is-changing");
-        };
-
-        previewImage.onerror = function () {
-          previewImage.classList.remove("is-changing");
-
-          console.warn(
-            "Gambar Vitrase tidak ditemukan:",
-            image
-          );
-        };
-
-      }, 180);
+        console.warn(
+          "Gambar Vitrase tidak ditemukan:",
+          image
+        );
+      };
 
     });
 
