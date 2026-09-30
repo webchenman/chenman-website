@@ -2,58 +2,55 @@
    CHENMAN — MAIN CSS 
 ========================================================= */ 
  
-:root {
-  /* WARNA UTAMA WEBSITE */
-  --black: #B8BCC1;
-  --dark: #AEB3B8;
-  --dark-soft: #3A3D40;
-
-  /* AKSEN GOLD / PREMIUM */
-  --gold: #B27A32;
-  --gold-soft: #C18A43;
-
+:root {  
+  /* WARNA UTAMA - LIGHT SILVER */
+  --black: #F1F2F2;  
+  --dark: #D5D8DA;  
+  --dark-soft: #C5C9CC;  
+  
+  /* AKSEN GOLD PREMIUM */
+  --gold: #B9853E;  
+  --gold-soft: #C99A5A;  
+  
   /* WARNA TERANG */
-  --cream: #F4F5F5;
-  --cream-light: #FAFAFA;
-  --cream-soft: #E4E6E8;
-
-  /* WARNA TEKS */
-  --muted: #62676B;
-  --text-dark: #292C2F;
-
-  /* GARIS */
-  --line: rgba(50, 55, 60, 0.15);
-
-  /* FONT */
-  --serif: 'Playfair Display', serif;
-  --sans: 'DM Sans', sans-serif;
+  --cream: #F7F7F6;  
+  --cream-light: #FFFFFF;  
+  --cream-soft: #E8EAEB;  
+  
+  /* WARNA TEKS - ABU-ABU, BUKAN HITAM */
+  --muted: #777C80;  
+  --text-dark: #55595C;  
+  --line: rgba(85, 89, 92, .14);  
+  
+  --serif: 'Playfair Display', serif;  
+  --sans: 'DM Sans', sans-serif;  
+}  
+  
+* {  
+  box-sizing: border-box;  
+  margin: 0;  
+  padding: 0;  
+}  
+  
+html {  
+  scroll-behavior: smooth;  
+}  
+  
+body {  
+  background: var(--cream-light);  
+  color: var(--text-dark);  
+  font-family: var(--sans);  
+  line-height: 1.6;  
+}  
+  
+img {  
+  max-width: 100%;  
+}  
+  
+button,  
+a {  
+  font-family: inherit;  
 }
- 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-} 
- 
-html { 
-  scroll-behavior: smooth; 
-} 
- 
-body { 
-  background: var(--black); 
-  color: #fff; 
-  font-family: var(--sans); 
-  line-height: 1.6; 
-} 
- 
-img { 
-  max-width: 100%; 
-} 
- 
-button, 
-a { 
-  font-family: inherit; 
-} 
  
  
 /* ========================================================= 
