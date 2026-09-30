@@ -1425,7 +1425,7 @@ section.vision-mission-section
 ========================================================= */ 
  
 .about-chenman { 
-  background: var(--cream-soft); 
+  background: #c7c6c6c2; 
   color: var(--text-dark); 
   padding: 120px 7%; 
 } 
