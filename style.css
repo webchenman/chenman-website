@@ -2725,10 +2725,10 @@ footer a {
  
   /* KONSULTASI */ 
  
-  .sales-section { 
-    padding: 65px 22px 75px; 
-    background: var(--cream) !important; 
-  } 
+  .sales-section {
+  padding: 65px 30px 75px;
+  background: var(--cream) !important;
+}
  
   .consultation-feature { 
     grid-template-columns: repeat(3,1fr); 
