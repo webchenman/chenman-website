@@ -995,7 +995,11 @@ section.vision-mission-section
 /* ========================================================= 
    FOTO TEAM / FOTO RAMEAN 
 ========================================================= */ 
- 
+
+.team {
+  background: #13465f;
+}
+
 .team-section { 
   padding: 0 7% 120px; 
   background: #E8EAEB; 
