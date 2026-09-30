@@ -1141,13 +1141,11 @@ section.vision-mission-section
 @media (max-width: 600px) {
 
   .sales-section {
-    width: calc(100% - 20px);
-    margin: 0 auto;
-
-    padding: 70px 22px 75px;
-
-    border-radius: 20px;
-  }
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 70px 20px 75px;
+  border-radius: 20px;
+}
 
   .consultation-feature {
     grid-template-columns: 1fr;
