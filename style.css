@@ -178,21 +178,14 @@ a {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(184,188,193,.92) 0%,
-      rgba(184,188,193,.82) 25%,
-      rgba(184,188,193,.58) 52%,
-      rgba(184,188,193,.28) 78%,
-      rgba(184,188,193,.38) 100%
-    ),
-
-    linear-gradient(
-      180deg,
-      rgba(220,223,226,.20),
-      rgba(130,135,140,.35)
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(145, 150, 155, 0.55) 0%,
+    rgba(170, 175, 180, 0.40) 30%,
+    rgba(190, 195, 200, 0.20) 55%,
+    rgba(200, 205, 210, 0.05) 75%,
+    rgba(200, 205, 210, 0) 100%
+  );
 }
 
 /* ISI HERO */
