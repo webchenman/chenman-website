@@ -2798,9 +2798,19 @@ footer a {
 section.sales-section,
 section:has(.consultation-feature),
 section:has(.consultation-grid) {
-  width: 100%;
   background: var(--cream) !important;
   color: var(--text-dark) !important;
+}
+
+@media (max-width: 600px) {
+  .sales-section,
+  section.sales-section,
+  section:has(.consultation-feature),
+  section:has(.consultation-grid) {
+    width: calc(100% - 32px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 /* =====================================================
