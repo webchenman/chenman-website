@@ -2781,8 +2781,8 @@ section:has(.consultation-grid) {
 }
 
 .site-header.scrolled {
-  background: rgba(5,5,4,.96);
-  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+  background: rgba(230, 230, 222, 0.78);
+  box-shadow: 0 8px 30px rgba(250, 250, 250, 0.836);
 }
 
 
