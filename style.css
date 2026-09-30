@@ -998,9 +998,9 @@ section.vision-mission-section
  
 .team-section { 
   padding: 0 7% 120px; 
-  background: var(--black); 
+  background: #E8EAEB; 
 } 
- 
+
 .team-photo { 
   width: 100%; 
   height: 650px; 
@@ -1008,7 +1008,7 @@ section.vision-mission-section
   background: #cddacd; 
   position: relative; 
 } 
- 
+
 .team-photo img { 
   width: 100%; 
   height: 100%; 
@@ -1016,11 +1016,11 @@ section.vision-mission-section
   object-fit: cover; 
   transition: transform .8s ease; 
 } 
- 
+
 .team-photo:hover img { 
   transform: scale(1.025); 
 } 
- 
+
 .team-caption { 
   position: absolute; 
   left: 35px; 
@@ -1030,11 +1030,10 @@ section.vision-mission-section
   font-size: 11px; 
   letter-spacing: 2px; 
 } 
- 
+
 .team-caption span { 
   color: var(--gold); 
-} 
- 
+}
  
 /* ========================================================= 
    FOTO KONSULTASI / KARYAWAN 
