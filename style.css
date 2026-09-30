@@ -996,20 +996,32 @@ section.vision-mission-section
    FOTO TEAM / FOTO RAMEAN 
 ========================================================= */ 
 
-.team {
-  background: #d9dcdd;
+/* =========================================================
+   OUR TEAM — LIGHT SILVER
+========================================================= */
+
+section.team.section {
+  background: #D9DCDE !important;
+  color: #575A5C;
+  padding: 120px 7%;
 }
 
-.team-section { 
-  padding: 0 7% 120px; 
-  background: #E8EAEB; 
-} 
+section.team.section h2 {
+  color: #575A5C;
+}
+
+section.team.section h2 em {
+  color: var(--gold);
+}
+
+
+/* FOTO TEAM */
 
 .team-photo { 
   width: 100%; 
   height: 650px; 
   overflow: hidden; 
-  background: #cddacd; 
+  background: #CDD1D4; 
   position: relative; 
 } 
 
@@ -1023,7 +1035,7 @@ section.vision-mission-section
 
 .team-photo:hover img { 
   transform: scale(1.025); 
-} 
+}
 
 .team-caption { 
   position: absolute; 
