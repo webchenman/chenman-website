@@ -3,24 +3,32 @@
 ========================================================= */ 
  
 :root {
-  /* PALET UTAMA — LIGHT SILVER */
-  --black: #EEF0F1;
-  --dark: #D9DDE0;
-  --dark-soft: #C9CED2;
+  /* =========================================================
+     PALET UTAMA — LIGHT SILVER + WARM CREAM
+  ========================================================= */
+  --black: #ECEDEB;
+  --dark: #E3E5E4;
+  --dark-soft: #DCE0DF;
 
-  /* AKSEN PREMIUM — CHAMPAGNE GOLD */
+  /* =========================================================
+     AKSEN PREMIUM — SOFT CHAMPAGNE GOLD
+  ========================================================= */
   --gold: #B9853E;
   --gold-soft: #C99A5A;
 
-  /* WARNA TERANG */
-  --cream: #F5F6F6;
-  --cream-light: #FFFFFF;
-  --cream-soft: #E9EBEC;
+  /* =========================================================
+     WARM LIGHT
+  ========================================================= */
+  --cream: #F3EEE4;
+  --cream-light: #FAF9F6;
+  --cream-soft: #EAE5DB;
 
-  /* WARNA TEKS — SOFT CHARCOAL / TAUPE */
-  --muted: #6F7579;
-  --text-dark: #555B5F;
-  --line: rgba(85, 91, 95, .14);
+  /* =========================================================
+     TEXT — WARM TAUPE / GREY
+  ========================================================= */
+  --muted: #706A64;
+  --text-dark: #59534E;
+  --line: rgba(89,83,78,.13);
 
   --serif: 'Playfair Display', serif;
   --sans: 'DM Sans', sans-serif;
@@ -2115,7 +2123,7 @@ section.vision-mission-section
 }
 
 .projects-vitrase .project-note {
-  color: #777;
+  color: #77716A;
 }
 
 /* =========================================================
@@ -2296,20 +2304,21 @@ section.vision-mission-section
 }
  
 /* =========================================================
-   CONTACT / START A PROJECT — WARM CREAM GOLD
+   CONTACT / START A PROJECT
+   WARM CREAM GOLD — LIGHT & PROFESSIONAL
 ========================================================= */
 
 .cta {
-  background: #F0E3CC;
-  color: #5A5148;
+  background: #EDE1CA;
+  color: #59534E;
 }
 
 .cta .kicker {
-  color: #B9853E;
+  color: #A97835;
 }
 
 .cta h2 {
-  color: #5A5148;
+  color: #59534E;
 }
 
 .cta h2 em {
@@ -2318,7 +2327,7 @@ section.vision-mission-section
 }
 
 .cta .body-copy {
-  color: #6B6259;
+  color: #6B645D;
 }
 
 /* =========================================================
@@ -2349,12 +2358,11 @@ section.vision-mission-section
 
   padding: 8px 14px 8px 8px;
 
-  /* SEMUA BORDER CHAMPAGNE */
-  border: 1px solid rgba(201, 161, 91, 0.55);
+  border: 1px solid rgba(185, 133, 62, 0.42);
 
-  background: rgba(255, 252, 245, 0.55);
+  background: rgba(251, 248, 241, 0.72);
 
-  color: #5A5148;
+  color: #59534E;
 
   text-decoration: none;
 
@@ -2370,9 +2378,9 @@ section.vision-mission-section
 ========================================================= */
 
 .contact-item:hover {
-  border-color: #B9853E;
+  border-color: rgba(185, 133, 62, 0.72);
 
-  background: rgba(255, 252, 245, 0.78);
+  background: rgba(255, 252, 246, 0.92);
 
   transform: translateY(-2px);
 }
@@ -2391,10 +2399,11 @@ section.vision-mission-section
   display: grid;
   place-items: center;
 
-  border: 1px solid rgba(185, 133, 62, 0.48);
+  border: 1px solid rgba(185, 133, 62, 0.46);
 
   color: #B9853E;
-  background: rgba(255, 249, 238, 0.35);
+
+  background: rgba(255, 250, 241, 0.46);
 }
 
 
@@ -2421,7 +2430,7 @@ section.vision-mission-section
 
 
 .contact-info small {
-  color: #B9853E;
+  color: #B07C37;
 
   font-size: 7px;
   font-weight: 700;
@@ -2432,7 +2441,7 @@ section.vision-mission-section
 
 
 .contact-info strong {
-  color: #5A5148;
+  color: #5A544F;
 
   font-family: var(--sans);
 
@@ -2513,7 +2522,7 @@ section.vision-mission-section
   }
 
 }
- 
+
 /* ========================================================= 
    FOOTER 
 ========================================================= */ 
@@ -2523,13 +2532,13 @@ footer {
   border-top: 1px solid var(--line); 
   display: flex; 
   justify-content: space-between; 
-  color: #777; 
+  color: #77716A; 
   font-size: 9px; 
   letter-spacing: 1.5px; 
 } 
  
 footer a { 
-  color: #aaa; 
+  color: #918A82; 
   text-decoration: none; 
 } 
  
