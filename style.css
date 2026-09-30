@@ -2296,6 +2296,32 @@ section.vision-mission-section
 }
  
 /* =========================================================
+   CONTACT / START A PROJECT — WARM CREAM GOLD
+========================================================= */
+
+.cta {
+  background: #F0E3CC;
+  color: #5A5148;
+}
+
+.cta .kicker {
+  color: #B9853E;
+}
+
+.cta h2 {
+  color: #5A5148;
+}
+
+.cta h2 em {
+  color: #B9853E;
+  font-style: italic;
+}
+
+.cta .body-copy {
+  color: #6B6259;
+}
+
+/* =========================================================
    CONTACT — PREMIUM SOCIAL LINKS
 ========================================================= */
 
@@ -2326,9 +2352,9 @@ section.vision-mission-section
   /* SEMUA BORDER CHAMPAGNE */
   border: 1px solid rgba(201, 161, 91, 0.55);
 
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(255, 252, 245, 0.55);
 
-  color: rgba(182, 121, 7, 0.726);
+  color: #5A5148;
 
   text-decoration: none;
 
@@ -2344,9 +2370,9 @@ section.vision-mission-section
 ========================================================= */
 
 .contact-item:hover {
-  border-color: #c9a15b;
+  border-color: #B9853E;
 
-  background: rgba(201, 161, 91, 0.055);
+  background: rgba(255, 252, 245, 0.78);
 
   transform: translateY(-2px);
 }
@@ -2365,9 +2391,10 @@ section.vision-mission-section
   display: grid;
   place-items: center;
 
-  border: 1px solid rgba(201, 161, 91, 0.55);
+  border: 1px solid rgba(185, 133, 62, 0.48);
 
-  color: #c9a15b;
+  color: #B9853E;
+  background: rgba(255, 249, 238, 0.35);
 }
 
 
@@ -2394,7 +2421,7 @@ section.vision-mission-section
 
 
 .contact-info small {
-  color: #c9a15b;
+  color: #B9853E;
 
   font-size: 7px;
   font-weight: 700;
@@ -2405,7 +2432,7 @@ section.vision-mission-section
 
 
 .contact-info strong {
-  color: #41403e;
+  color: #5A5148;
 
   font-family: var(--sans);
 
@@ -2423,7 +2450,7 @@ section.vision-mission-section
 .contact-arrow {
   margin-left: 8px;
 
-  color: #c9a15b;
+  color: #B9853E;
 
   font-size: 16px;
   font-weight: 400;
