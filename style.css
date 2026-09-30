@@ -276,7 +276,7 @@ a {
   align-items: center;
 
   background: var(--gold);
-  color: #030303;
+  color: #FFFFFF;
 
   text-decoration: none;
   font-weight: 600;
@@ -291,12 +291,14 @@ a {
   width: 48px;
   height: 48px;
 
-  background: var(--cream);
+  background: #F8F4EC;
+  color: #5A5148;
 
   display: grid;
   place-items: center;
 
   font-size: 20px;
+  font-weight: 600;
   margin-left: 2px;
 }
 
