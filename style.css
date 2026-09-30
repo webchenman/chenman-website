@@ -181,16 +181,8 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(235, 237, 238, 0.78) 0%,
-    rgba(225, 228, 230, 0.68) 25%,
-    rgba(215, 219, 221, 0.48) 42%,
-    rgba(215, 219, 221, 0.20) 60%,
-    rgba(215, 219, 221, 0.05) 78%,
-    rgba(215, 219, 221, 0) 100%
-  );
+   background: rgba(215, 219, 221, 0.30)
+  ;
 }
 
 /* ISI HERO */
