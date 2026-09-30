@@ -184,11 +184,12 @@ a {
 
   background: linear-gradient(
     90deg,
-    rgba(145, 150, 155, 0.55) 0%,
-    rgba(170, 175, 180, 0.40) 30%,
-    rgba(190, 195, 200, 0.20) 55%,
-    rgba(200, 205, 210, 0.05) 75%,
-    rgba(200, 205, 210, 0) 100%
+    rgba(235, 237, 238, 0.78) 0%,
+    rgba(225, 228, 230, 0.68) 25%,
+    rgba(215, 219, 221, 0.48) 42%,
+    rgba(215, 219, 221, 0.20) 60%,
+    rgba(215, 219, 221, 0.05) 78%,
+    rgba(215, 219, 221, 0) 100%
   );
 }
 
@@ -224,15 +225,22 @@ a {
 /* JUDUL */
 
 .hero h1 {
+
   font:
     400 clamp(54px,6vw,84px)/1.05
     var(--serif);
 
   letter-spacing: -2px;
+
+  color: #55595C;
+
+  text-shadow: 0 1px 3px rgba(255,255,255,.45);
 }
 
 .hero h1 em {
+
   color: var(--gold);
+
   font-style: italic;
 }
 
