@@ -3,32 +3,24 @@
 ========================================================= */ 
  
 :root {
-  /* =========================================================
-     PALET UTAMA — LIGHT SILVER + WARM CREAM
-  ========================================================= */
-  --black: #ECEDEB;
-  --dark: #E3E5E4;
-  --dark-soft: #DCE0DF;
+  /* PALET UTAMA — LIGHT SILVER */
+  --black: #E4E6E6;
+  --dark: #D9DCDE;
+  --dark-soft: #D2D5D6;
 
-  /* =========================================================
-     AKSEN PREMIUM — SOFT CHAMPAGNE GOLD
-  ========================================================= */
+  /* AKSEN PREMIUM — CHAMPAGNE GOLD */
   --gold: #B9853E;
   --gold-soft: #C99A5A;
 
-  /* =========================================================
-     WARM LIGHT
-  ========================================================= */
-  --cream: #F3EEE4;
-  --cream-light: #FAF9F6;
-  --cream-soft: #EAE5DB;
+  /* WARNA TERANG */
+  --cream: #F1E9DA;
+  --cream-light: #FBFAF7;
+  --cream-soft: #EEEAE3;
 
-  /* =========================================================
-     TEXT — WARM TAUPE / GREY
-  ========================================================= */
-  --muted: #706A64;
-  --text-dark: #59534E;
-  --line: rgba(89,83,78,.13);
+  /* WARNA TEKS — SOFT CHARCOAL / TAUPE */
+  --muted: #6D6964;
+  --text-dark: #59534D;
+  --line: rgba(89, 83, 77, .14);
 
   --serif: 'Playfair Display', serif;
   --sans: 'DM Sans', sans-serif;
@@ -76,7 +68,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(244, 246, 247, .92);
+  background: rgba(248, 247, 244, .94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(85,91,95,.10);
 } 
@@ -99,7 +91,7 @@ a {
 .brand-main {
   font-family: var(--serif);
   font-size: 21px;
-  color: #555B5F;
+  color: #59534D;
   white-space: nowrap;
 }
 
@@ -121,7 +113,7 @@ a {
  
 .desktop-nav a,
 .header-actions a {
-  color: #636A6E;
+  color: #68635D;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 1.4px;
@@ -155,7 +147,7 @@ a {
 .menu-btn i {
   display: block;
   height: 1px;
-  background: #6A7074;
+  background: #6A655F;
   margin: 7px 0;
 } 
  
@@ -189,7 +181,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(217, 221, 223, 0.20);
+  background: rgba(216, 220, 221, 0.18);
 }
 
 /* ISI HERO */
@@ -212,7 +204,7 @@ a {
   bottom: -42px;
   left: -36px;
   width: calc(100% + 78px);
-  background: rgba(245, 246, 247, .46);
+  background: rgba(250, 249, 246, .50);
   border: 1px solid rgba(255,255,255,.24);
   border-radius: 0 28px 28px 0;
   backdrop-filter: blur(4px);
@@ -226,7 +218,7 @@ a {
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #6A7074;
+  color: #6A655F;
   margin-bottom: 35px;
 }
 
@@ -247,7 +239,7 @@ a {
     var(--serif);
 
   letter-spacing: -2px;
-  color: #5B5149;
+  color: #5A514D;
   text-shadow: 0 1px 2px rgba(255,255,255,.55);
 }
 
@@ -262,7 +254,7 @@ a {
 .lead {
   font-size: 17px;
   line-height: 1.8;
-  color: #5F5B57;
+  color: #625C56;
   max-width: 590px;
   margin: 28px 0 36px;
   text-shadow: 0 1px 2px rgba(255,255,255,.45);
@@ -291,14 +283,12 @@ a {
   width: 48px;
   height: 48px;
 
-  background: #F8F4EC;
-  color: #5A5148;
+  background: var(--cream);
 
   display: grid;
   place-items: center;
 
   font-size: 20px;
-  font-weight: 600;
   margin-left: 2px;
 }
 
@@ -324,7 +314,7 @@ a {
 
   z-index: 2;
 
-  color: rgba(85,91,95,.70);
+  color: rgba(89,83,77,.72);
 
   font-size: 10px;
   letter-spacing: 2px;
@@ -348,7 +338,7 @@ a {
   }
 
   .hero-overlay {
-    background: rgba(217, 221, 223, .22);
+    background: rgba(216, 220, 221, .20);
   }
 
   .hero-content {
@@ -367,7 +357,7 @@ a {
   }
 
   .hero-overlay {
-    background: rgba(217, 221, 223, .24);
+    background: rgba(216, 220, 221, .22);
   }
 
   .hero-content {
@@ -382,7 +372,7 @@ a {
     left: -20px;
     width: calc(100% + 38px);
     border-radius: 0 22px 22px 0;
-    background: rgba(245, 246, 247, .52);
+    background: rgba(250, 249, 246, .54);
   }
 
   .hero h1 {
@@ -995,36 +985,22 @@ section.vision-mission-section
 /* ========================================================= 
    FOTO TEAM / FOTO RAMEAN 
 ========================================================= */ 
-
-/* =========================================================
-   OUR TEAM — LIGHT SILVER
-========================================================= */
-
-section.team.section {
-  background: #D9DCDE !important;
-  color: #575A5C;
-  padding: 120px 7%;
-}
-
-section.team.section h2 {
-  color: #575A5C;
-}
-
-section.team.section h2 em {
-  color: var(--gold);
-}
-
-
-/* FOTO TEAM */
-
+ 
+.team.section,
+.team-section { 
+  padding: 0 7% 120px; 
+  background: #E3E5E5 !important;
+  color: #5A554F;
+} 
+ 
 .team-photo { 
   width: 100%; 
   height: 650px; 
   overflow: hidden; 
-  background: #CDD1D4; 
+  background: #CDD1D2; 
   position: relative; 
 } 
-
+ 
 .team-photo img { 
   width: 100%; 
   height: 100%; 
@@ -1032,11 +1008,11 @@ section.team.section h2 em {
   object-fit: cover; 
   transition: transform .8s ease; 
 } 
-
+ 
 .team-photo:hover img { 
   transform: scale(1.025); 
-}
-
+} 
+ 
 .team-caption { 
   position: absolute; 
   left: 35px; 
@@ -1046,10 +1022,11 @@ section.team.section h2 em {
   font-size: 11px; 
   letter-spacing: 2px; 
 } 
-
+ 
 .team-caption span { 
   color: var(--gold); 
-}
+} 
+ 
  
 /* ========================================================= 
    FOTO KONSULTASI / KARYAWAN 
@@ -1310,7 +1287,7 @@ section.team.section h2 em {
   background: var(--cream-light); 
   border-radius: 18px; 
   padding: 22px; 
-  color: #5B5149; 
+  color: #5A514D; 
   overflow: hidden; 
   box-shadow: 0 12px 35px rgba(0,0,0,.08); 
 } 
@@ -1355,7 +1332,7 @@ section.team.section h2 em {
   font-family: var(--serif);
   font-size: 36px;
   font-weight: 400;
-  color: #5B5149;
+  color: #5A514D;
 } 
  
 .color-title { 
@@ -1433,7 +1410,7 @@ section.team.section h2 em {
 } 
  
 .color-option.active {
-  color: #5B5149;
+  color: #5A514D;
 } 
  
 .color-option.active img { 
@@ -1543,7 +1520,7 @@ section.team.section h2 em {
 
   padding: 32px 28px;
 
-  background: var(--dark-soft);
+  background: #D8DBDC;
   border: 1px solid rgba(85,91,95,.12);
 
   display: flex;
@@ -1739,7 +1716,7 @@ section.team.section h2 em {
  
 .about-card h3 {
   margin: 0 0 14px;
-  color: #5B5149; 
+  color: #5A514D; 
   font-family: var(--serif); 
   font-size: 21px; 
   font-weight: 400; 
@@ -2023,7 +2000,7 @@ section.team.section h2 em {
 ========================================================= */
 
 .projects {
-  background: var(--dark-soft);
+  background: #D8DBDC;
   overflow: hidden;
 }
 
@@ -2126,8 +2103,8 @@ section.team.section h2 em {
 ========================================================= */
 
 .projects-vitrase {
-  background: #ffffff;
-  color: #272726;
+  background: #F7F4EC;
+  color: #5B554E;
 }
 
 /* Judul dan label */
@@ -2136,11 +2113,11 @@ section.team.section h2 em {
 }
 
 .projects-vitrase h2 {
-  color: #20201f;
+  color: #59534D;
 }
 
 .projects-vitrase .project-note {
-  color: #77716A;
+  color: #77716B;
 }
 
 /* =========================================================
@@ -2321,21 +2298,20 @@ section.team.section h2 em {
 }
  
 /* =========================================================
-   CONTACT / START A PROJECT
-   WARM CREAM GOLD — LIGHT & PROFESSIONAL
+   CONTACT / START A PROJECT — WARM CREAM GOLD
 ========================================================= */
 
 .cta {
-  background: #EDE1CA;
-  color: #59534E;
+  background: #F1E8D7;
+  color: #5A514D;
 }
 
 .cta .kicker {
-  color: #A97835;
+  color: #B9853E;
 }
 
 .cta h2 {
-  color: #59534E;
+  color: #5A514D;
 }
 
 .cta h2 em {
@@ -2344,7 +2320,7 @@ section.team.section h2 em {
 }
 
 .cta .body-copy {
-  color: #6B645D;
+  color: #68615B;
 }
 
 /* =========================================================
@@ -2375,11 +2351,12 @@ section.team.section h2 em {
 
   padding: 8px 14px 8px 8px;
 
-  border: 1px solid rgba(185, 133, 62, 0.42);
+  /* SEMUA BORDER CHAMPAGNE */
+  border: 1px solid rgba(201, 161, 91, 0.55);
 
-  background: rgba(251, 248, 241, 0.72);
+  background: rgba(255, 252, 245, 0.55);
 
-  color: #59534E;
+  color: #5A514D;
 
   text-decoration: none;
 
@@ -2395,9 +2372,9 @@ section.team.section h2 em {
 ========================================================= */
 
 .contact-item:hover {
-  border-color: rgba(185, 133, 62, 0.72);
+  border-color: #B9853E;
 
-  background: rgba(255, 252, 246, 0.92);
+  background: rgba(255, 252, 245, 0.78);
 
   transform: translateY(-2px);
 }
@@ -2416,11 +2393,10 @@ section.team.section h2 em {
   display: grid;
   place-items: center;
 
-  border: 1px solid rgba(185, 133, 62, 0.46);
+  border: 1px solid rgba(185, 133, 62, 0.48);
 
   color: #B9853E;
-
-  background: rgba(255, 250, 241, 0.46);
+  background: rgba(255, 249, 238, 0.35);
 }
 
 
@@ -2447,7 +2423,7 @@ section.team.section h2 em {
 
 
 .contact-info small {
-  color: #B07C37;
+  color: #B9853E;
 
   font-size: 7px;
   font-weight: 700;
@@ -2458,7 +2434,7 @@ section.team.section h2 em {
 
 
 .contact-info strong {
-  color: #5A544F;
+  color: #5A514D;
 
   font-family: var(--sans);
 
@@ -2539,7 +2515,7 @@ section.team.section h2 em {
   }
 
 }
-
+ 
 /* ========================================================= 
    FOOTER 
 ========================================================= */ 
@@ -2549,13 +2525,13 @@ footer {
   border-top: 1px solid var(--line); 
   display: flex; 
   justify-content: space-between; 
-  color: #77716A; 
+  color: #77716B; 
   font-size: 9px; 
   letter-spacing: 1.5px; 
 } 
  
 footer a { 
-  color: #918A82; 
+  color: #aaa; 
   text-decoration: none; 
 } 
  
@@ -2626,8 +2602,10 @@ footer a {
  
   /* TEAM */ 
  
+  .team.section,
   .team-section { 
     padding: 0 5% 85px; 
+    background: #E3E5E5 !important;
   } 
  
   .team-photo { 
@@ -2726,8 +2704,10 @@ footer a {
  
   /* TEAM */ 
  
+  .team.section,
   .team-section { 
     padding: 0 22px 65px; 
+    background: #E3E5E5 !important;
   } 
  
   .team-photo { 
@@ -2843,7 +2823,7 @@ section:has(.consultation-grid) {
 }
 
 .site-header.scrolled {
-  background: rgba(244, 246, 247, .96);
+  background: rgba(248, 247, 244, .96);
   box-shadow: 0 8px 30px rgba(85,91,95,.10);
 }
 
@@ -2861,7 +2841,7 @@ section:has(.consultation-grid) {
   flex-direction: column;
   gap: 0;
 
-  background: #F1F3F4;
+  background: #F5F2EC;
   border: 1px solid rgba(255,255,255,.1);
 
   opacity: 0;
@@ -2882,7 +2862,7 @@ section:has(.consultation-grid) {
 
 .mobile-menu a {
   padding: 18px 20px;
-  color: #60666A;
+  color: #66605A;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 1.5px;
@@ -3675,4 +3655,116 @@ section.vision-mission-section
     object-position: center !important;
   }
 
+}
+
+
+/* =========================================================
+   FINAL COLOR HARMONY — LIGHT SILVER / WARM CREAM / GOLD
+========================================================= */
+
+body {
+  background: #FBFAF7;
+  color: #59534D;
+}
+
+.site-header,
+.site-header.scrolled {
+  background: rgba(248,247,244,.96);
+  border-bottom-color: rgba(89,83,77,.10);
+}
+
+.brand-main {
+  color: #59534D;
+}
+
+.desktop-nav a,
+.header-actions a {
+  color: #68625C;
+}
+
+.menu-btn i {
+  background: #6A645E;
+}
+
+/* Our Team — soft silver */
+section.team.section {
+  background: #E3E5E5 !important;
+  color: #5A554F;
+}
+
+section.team.section h2 {
+  color: #5A554F;
+}
+
+section.team.section h2 em {
+  color: var(--gold);
+}
+
+/* Consultation — warm cream */
+#konsultasi,
+.sales-section {
+  background-color: #F1E8D7 !important;
+  color: #5A554F;
+}
+
+/* Projects — soft silver, not dark */
+.projects {
+  background: #D8DBDC !important;
+  color: #5A554F;
+}
+
+.projects h2,
+.projects .section-label,
+.projects .project-note {
+  color: #5A554F;
+}
+
+.projects h2 em,
+.projects .section-label {
+  color: var(--gold);
+}
+
+/* Collection / light sections */
+.collection,
+.about-chenman {
+  background: #F7F4EC;
+}
+
+/* Contact — warm cream gold */
+.cta {
+  background: #F1E8D7 !important;
+  color: #5A554F;
+}
+
+.contact-item {
+  background: rgba(255,255,255,.38);
+  border-color: rgba(185,133,62,.48);
+  color: #5A554F;
+}
+
+.contact-item:hover {
+  background: rgba(255,255,255,.58);
+  border-color: var(--gold);
+}
+
+.contact-info strong {
+  color: #5A554F;
+}
+
+.contact-info small,
+.contact-arrow,
+.contact-icon {
+  color: var(--gold);
+}
+
+.gold-btn b {
+  background: #F7F2E8;
+  color: #5A554F;
+}
+
+/* Softer active card shadow */
+section.vision-mission-section .vision-card.active {
+  box-shadow:
+    0 18px 36px rgba(89,83,77,.14),
+    0 0 0 1px rgba(185,133,62,.14);
 }
